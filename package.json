@@ -2,7 +2,9 @@
   "name": "school-of-rock",
   "version": "0.0.1",
   "dependencies": {
+    "clarify": "^1.0.5",
     "co": "^4.6.0",
-    "koa": "^1.1.2"
+    "koa": "^1.1.2",
+    "trace": "^2.0.2"
   }
 }
