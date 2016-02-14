@@ -4,7 +4,9 @@
   "dependencies": {
     "clarify": "^1.0.5",
     "co": "^4.6.0",
+    "jade": "^1.11.0",
     "koa": "^1.1.2",
+    "mongoose": "^4.4.3",
     "trace": "^2.0.2"
   }
 }
