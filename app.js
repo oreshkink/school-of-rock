@@ -5,7 +5,6 @@ require('clarify');
 
 let koa = require('koa');
 let koa_router = require('koa-router');
-let mongoose = require('mongoose');
 let jade = require('jade');
 
 let app = koa();
@@ -32,7 +31,6 @@ router
     });
 
 app
-    .use(views(__dirname + '/templates', { map: { html: 'jade' } }))
     .use(router.routes())
     .use(router.allowedMethods());
 
@@ -43,7 +41,6 @@ app.use(function *(next) {
     } catch (err) {
         this.status = 500;
         this.body = err.message;
-        this.app.emit("error", err, this);
     }
 });
 
