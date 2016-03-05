@@ -1,8 +1,9 @@
-let mongoose = require('mongoose');
-let jade = require('jade');
+'use strict';
 
-let app = koa();
-let router = koa_router();
+require('trace');
+require('clarify');
+
+let mongoose = require('mongoose');
 
 mongoose.set('debug', true);
 mongoose.connect('mongodb://localhost/test', {
@@ -16,7 +17,17 @@ mongoose.connect('mongodb://localhost/test', {
 
 let classSchema = new mongoose.Schema({
     title: {
-        type: String
+        type: String,
+        required: true,
+        validate: [
+            {
+                validator: function check() {
+                    console.log('ff');
+                    return false;
+                },
+                message: 'Ошибка валидации'
+            }
+        ]
     } ,
     description: {
         type: String
@@ -26,7 +37,7 @@ let classSchema = new mongoose.Schema({
 let Class = mongoose.model('Class', classSchema);
 
 let piano = new Class({
-    title: 'piano',
+    title: 'bar',
     description: 'piano description'
 });
 
