@@ -41,6 +41,12 @@ let piano = new Class({
     description: 'piano description'
 });
 
-piano.save(function() {
+piano.save(function(err) {
+    if (err.name == 'ValidationError') {
+
+    } else {
+        console.log(err.stack)
+    }
+    console.log(err.name);
     mongoose.disconnect();
 });
