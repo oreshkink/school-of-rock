@@ -3,12 +3,17 @@
 require('trace');
 require('clarify');
 
+//
 let koa = require('koa');
 let koa_router = require('koa-router');
 let mongoose = require('mongoose');
 let jade = require('jade');
 let path = require('path');
 let fs = require('fs');
+
+// Models
+let Teacher = require('./models/teacher');
+let Instrument = require('./models/instrument');
 
 let app = koa();
 let router = koa_router();
@@ -35,11 +40,18 @@ router
     .get('/contacts', function *(next) {
         this.body = jade.renderFile('templates/contacts.jade');
     })
-    .get('/classes', function *(next) {
-        this.body = jade.renderFile('templates/classes/index.jade');
+    .get('/instruments', function *(next) {
+        let instruments = yield Instrument.find().exec();
+
+        this.body = jade.renderFile(
+            'templates/instruments/index.jade',
+            {
+                instruments: instruments
+            }
+        );
     })
-    .get('/classes/:id', function *(next) {
-        this.body = jade.renderFile('templates/classes/show.jade');
+    .get('/instruments/:id', function *(next) {
+        this.body = jade.renderFile('templates/instruments/show.jade');
     })
     .get('/teachers', function *(next) {
         this.body = jade.renderFile('templates/teachers/index.jade');
@@ -53,5 +65,3 @@ app
     .use(router.allowedMethods());
 
 app.listen(3000);
-
-mongoose.disconnect();

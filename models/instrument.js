@@ -2,7 +2,7 @@
 
 let mongoose = require('mongoose');
 
-let Class = new mongoose.Schema({
+let instrumentSchema = new mongoose.Schema({
     title: {
         type: String,
         required: 'Название направления обязательно'
@@ -13,4 +13,4 @@ let Class = new mongoose.Schema({
     }
 });
 
-module.exports = Class;
+module.exports = mongoose.model('Instrument', instrumentSchema);

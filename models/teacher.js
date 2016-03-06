@@ -2,7 +2,7 @@
 
 let mongoose = require('mongoose');
 
-let Teacher = new mongoose.Schema({
+let teacherSchema = new mongoose.Schema({
     name: {
         type: String,
         required: 'Имя учителя обязательно'
@@ -12,5 +12,7 @@ let Teacher = new mongoose.Schema({
         required: 'Описание учителя обязательно'
     }
 });
+
+let Teacher = mongoose.model('Class', teacherSchema);
 
 module.exports = Teacher;
