@@ -10,9 +10,12 @@ let teacherSchema = new mongoose.Schema({
     description: {
         type: String,
         required: 'Описание учителя обязательно'
+    },
+    slug: {
+        type: String,
+        required: 'SLUG обязателен'
     }
 });
 
-let Teacher = mongoose.model('Class', teacherSchema);
-
-module.exports = Teacher;
+module.exports.schema = teacherSchema;
+module.exports.model = mongoose.model('Teacher', teacherSchema);

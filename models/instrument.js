@@ -10,7 +10,12 @@ let instrumentSchema = new mongoose.Schema({
     description: {
         type: String,
         required: 'ќписание направлени€ об€зательно'
+    },
+    slug: {
+        type: String,
+        required: 'Slug об€зателен'
     }
 });
 
-module.exports = mongoose.model('Instrument', instrumentSchema);
+module.exports.schema = instrumentSchema;
+module.exports.model = mongoose.model('Instrument', instrumentSchema);
