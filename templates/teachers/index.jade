@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+    head
+    body
+        h1 Список
+        if teachers.length
+            each teacher in teachers
+                h2= teacher.name
+        p.
+            Jade is a terse and simple templating language with a
+            strong focus on performance and powerful features.

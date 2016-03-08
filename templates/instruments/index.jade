@@ -1,6 +1,11 @@
 doctype html
 html(lang="en")
     head
-        title Инструменты
     body
-        h1 Jade - node template engine
+        h1 РРЅСЃС‚СЂСѓРјРµРЅС‚С‹
+        if instruments.length
+            each instrument in instruments
+                h2= instrument.title
+
+                each teacher in instrument.formattedTeachers
+                    h3= teacher.name
