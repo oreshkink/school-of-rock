@@ -33,10 +33,8 @@ mongoose.connect('mongodb://localhost/test', {
 
 router
     .get('/', function *(next) {
-        this.body = jade.renderFile('templates/home.jade');
     })
     .get('/contacts', function *(next) {
-        this.body = jade.renderFile('templates/contacts.jade');
     })
     .get('instruments', '/instruments', function* () {
         yield instrumentController.index.bind(this, router);

@@ -1,0 +1,22 @@
+div.site-toolbar
+
+    // Логотип
+    div.logo
+
+    // Главное меню
+    - var siteToolbarSections = []
+    - siteToolbarSections.push({ url: '/about', title: 'О школе' });
+    - siteToolbarSections.push({ url: '/instruments', title: 'Направления' });
+    - siteToolbarSections.push({ url: '/teachers', title: 'Преподаватели' });
+    - siteToolbarSections.push({ url: '/feedback', title: 'Отзывы' });
+    - siteToolbarSections.push({ url: '/contacts', title: 'Контакты' });
+
+    div.main-menu-sections-wrapper
+        ul.main-menu-sections
+            each section in siteToolbarSections
+                li.section
+                    a(href=section.url)= section.title
+
+    // Контакты
+    div.contacts
+
