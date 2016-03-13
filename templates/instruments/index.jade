@@ -3,9 +3,11 @@ html(lang="en")
     head
     body
         h1 Инструменты
-        if instruments.length
+
+        if instruments && instruments.length
             each instrument in instruments
-                h2= instrument.title
+                h2
+                    a(href=router.url('instrument', instrument.slug))= instrument.title
 
                 each teacher in instrument.formattedTeachers
-                    h3= teacher.name
+                    a(href=router.url('teacher', teacher.slug))= teacher.name

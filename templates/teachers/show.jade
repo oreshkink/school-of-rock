@@ -2,13 +2,22 @@ doctype html
 html(lang="en")
     head
     body
-        h1= teacher.name
+        h1
+            a(href=router.url('teachers')) Список преподавателей
 
-        if instruments.length
-            each instrument in instruments
-                h2= instrument.title
+        div.teacher.container
 
-        #container.col
-            p.
-                Jade is a terse and simple templating language with a
-                strong focus on performance and powerful features.
+            div.name= teacher.name
+
+            div.description
+                div.title Описание преподавателя
+                div.specification !{teacher.description}
+
+            div.instruments
+                div.title Преподаваемые отделения
+
+                if instruments.length
+                    ul.instruments
+                        each instrument in instruments
+                            li
+                                a(href=router.url('instrument', instrument.slug))= instrument.title

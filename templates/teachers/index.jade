@@ -2,10 +2,8 @@ doctype html
 html(lang="en")
     head
     body
-        h1 Список
+        h1 Список преподавателей
         if teachers.length
             each teacher in teachers
-                h2= teacher.name
-        p.
-            Jade is a terse and simple templating language with a
-            strong focus on performance and powerful features.
+                h2
+                    a(href=router.url('teacher', teacher.slug))= teacher.name
