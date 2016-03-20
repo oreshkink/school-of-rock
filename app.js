@@ -6,6 +6,7 @@ require('clarify');
 let mongoose = require('mongoose');
 let koa = require('koa');
 let koa_router = require('koa-router');
+let serve = require('koa-static');
 let path = require('path');
 let fs = require('fs');
 
@@ -31,10 +32,10 @@ mongoose.connect('mongodb://localhost/test', {
     poolSize: 5
 });
 
+app.use(serve(__dirname + '/public'));
+
 router
-    .get('/', function *(next) {
-    })
-    .get('/contacts', function *(next) {
+    .get('/contacts', function *() {
     })
     .get('instruments', '/instruments', function* () {
         yield instrumentController.index.bind(this, router);
@@ -49,7 +50,6 @@ router
         yield teacherController.show.bind(this, router);
     });
 
-app
-    .use(router.routes());
+app.use(router.routes());
 
 app.listen(3000);
