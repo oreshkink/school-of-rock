@@ -1,23 +1,22 @@
-doctype html
-html(lang="en")
-    head
-    body
-        h1
-            a(href=router.url('teachers')) Список преподавателей
+extends ../blocks/main
 
-        div.teacher.container
+block body
+    h1
+        a(href=router.url('teachers')) Список преподавателей
 
-            div.name= teacher.name
+    div.teacher.container
 
-            div.description
-                div.title Описание преподавателя
-                div.specification !{teacher.description}
+        div.name= teacher.name
 
-            div.instruments
-                div.title Преподаваемые отделения
+        div.description
+            div.title Описание преподавателя
+            div.specification !{teacher.description}
 
-                if instruments.length
-                    ul.instruments
-                        each instrument in instruments
-                            li
-                                a(href=router.url('instrument', instrument.slug))= instrument.title
+        div.instruments
+            div.title Преподаваемые отделения
+
+            if instruments.length
+                ul.instruments
+                    each instrument in instruments
+                        li
+                            a(href=router.url('instrument', instrument.slug))= instrument.title

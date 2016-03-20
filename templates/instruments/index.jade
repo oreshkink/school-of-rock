@@ -1,13 +1,12 @@
-doctype html
-html(lang="en")
-    head
-    body
-        h1 Инструменты
+extends ../blocks/main
 
-        if instruments && instruments.length
-            each instrument in instruments
-                h2
-                    a(href=router.url('instrument', instrument.slug))= instrument.title
+block body
+    h1 Инструменты
 
-                each teacher in instrument.formattedTeachers
-                    a(href=router.url('teacher', teacher.slug))= teacher.name
+    if instruments && instruments.length
+        each instrument in instruments
+            h2
+                a(href=router.url('instrument', instrument.slug))= instrument.title
+
+            each teacher in instrument.formattedTeachers
+                a(href=router.url('teacher', teacher.slug))= teacher.name

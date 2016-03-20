@@ -1,14 +1,13 @@
-doctype html
-html(lang="en")
-    head
-    body
-        h1= instrument.title
+extends ../blocks/main
 
-        div
-            a(href=router.url('instruments')) Список инструментов
+block body
+    h1= instrument.title
 
-        if instruments && instruments.length
-            ul
-                each instrument in instruments
-                    li
-                        a(href=router.url('instrument', instrument.slug))= instrument.title
+    div
+        a(href=router.url('instruments')) Список инструментов
+
+    if instruments && instruments.length
+        ul
+            each instrument in instruments
+                li
+                    a(href=router.url('instrument', instrument.slug))= instrument.title
