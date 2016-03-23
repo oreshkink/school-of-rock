@@ -11,6 +11,7 @@ let path = require('path');
 let fs = require('fs');
 
 // Controllers
+let homeController = require('./controllers/home');
 let teacherController = require('./controllers/teacher');
 let instrumentController = require('./controllers/instrument');
 
@@ -35,6 +36,9 @@ mongoose.connect('mongodb://localhost/test', {
 app.use(serve(__dirname + '/public'));
 
 router
+    .get('/', function*() {
+        yield homeController.index.bind(this);
+    })
     .get('/contacts', function *() {
     })
     .get('instruments', '/instruments', function* () {
