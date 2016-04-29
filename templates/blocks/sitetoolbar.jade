@@ -2,6 +2,7 @@ div.site-toolbar
 
     // Логотип
     div.logo
+        a(href='/' class='logo-img')
 
     // Главное меню
     - var siteToolbarSections = []
@@ -11,12 +12,13 @@ div.site-toolbar
     - siteToolbarSections.push({ url: '/feedback', title: 'Отзывы' });
     - siteToolbarSections.push({ url: '/contacts', title: 'Контакты' });
 
-    div.main-menu-sections-wrapper
-        ul.main-menu-sections
+    div.main-menu-wrapper
+        ul.main-menu
             each section in siteToolbarSections
-                li.section
+                li.main-menu-section
                     a(href=section.url)= section.title
 
     // Контакты
     div.contacts
-
+        a(href='tel:+74951622804' class='phone') +7 (495) 162-28-04
+        a(href='/map' class='map-label')

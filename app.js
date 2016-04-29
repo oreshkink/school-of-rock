@@ -35,6 +35,7 @@ mongoose.connect('mongodb://localhost/test', {
 
 app.use(serve(__dirname + '/public'));
 
+
 router
     .get('/', function*() {
         yield homeController.index.bind(this);

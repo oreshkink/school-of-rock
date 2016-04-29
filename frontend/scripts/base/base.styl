@@ -1,3 +1,177 @@
+@font-face
+  font-family 'LatoWeb'
+  font-style normal
+  font-weight normal
+  src url('/Lato/fonts/Lato-Regular.woff2')
+  src url('/Lato/fonts/Lato-Regular.woff')
+  src url('/Lato/fonts/Lato-Regular.ttf')
+  text-rendering optimizeLegibility
+
+@font-face
+  font-family 'LatoWebThin'
+  font-style normal
+  font-weight normal
+  src url('/Lato/fonts/Lato-Thin.woff2')
+  src url('/Lato/fonts/Lato-Thin.woff')
+  src url('/Lato/fonts/Lato-Thin.ttf')
+  text-rendering optimizeLegibility
+
+@font-face
+  font-family 'LatoWebBlack'
+  font-style normal
+  font-weight normal
+  src url('/Lato/fonts/Lato-Black.woff2')
+  src url('/Lato/fonts/Lato-Black.woff')
+  src url('/Lato/fonts/Lato-Black.ttf')
+  text-rendering optimizeLegibility
+
 body
-  font: 14px Helvetica, Arial, sans-serif;
-  color: red;
+  height 100vh
+  background-color #0b0d0d
+  margin 0
+  padding 0
+  font-family 'LatoWeb'
+  background: url(/home-background.jpg) no-repeat center center
+  background-size cover
+
+//  Главное меню
+.site-toolbar
+  display flex
+  height 110px
+  align-items center
+
+  .logo
+    flex 0 0 170px
+    height 45px
+
+    .logo-img
+      display block
+      margin-left 40px
+      width 95px
+      height 100%
+      background url(/logo.png) 100% 100% no-repeat
+
+  .main-menu-wrapper
+    width 100%
+    font-size 14pt
+
+    .main-menu
+      display flex
+      min-width 550px
+      justify-content center
+      padding 0
+      text-transform uppercase
+      font-size 14px
+      font-family 'LatoWebBlack'
+
+      .main-menu-section
+        list-style none
+        padding 0 10px
+
+        a
+          color white
+          text-decoration none
+
+          &:hover
+            color #FFFEC9
+
+  .contacts
+    display flex
+    align-items center
+    flex 0 0 240px
+    height 45px
+
+    .phone
+      display block
+      color white
+      text-decoration none
+
+    .map-label
+      display block
+      background url('/map-label.png') no-repeat 12px 10px
+      background-color white
+      height 40px
+      width 40px
+      border-radius 50%
+      opacity 0.15
+      margin-left 20px
+
+      &:hover
+        opacity 1
+
+
+//  Информация для главной
+.main-info
+  display flex
+  width 1100px
+  margin 180px auto auto auto
+  color white
+
+  .main-brand-info
+    flex 0 0 550px
+
+    .name-en
+      font-family 'LatoWebBlack'
+      font-size 85px
+
+    .name-ru
+      font-family 'LatoWebThin'
+      margin-top -10px
+      font-size 72px
+      font-weight 100
+
+    .description
+      font-family 'LatoWebThin'
+      margin-top 20px
+      font-size 20px
+      line-height 24px
+
+
+    .read-more
+      margin-top 25px
+
+      a
+        font-size 19px
+        color #a89891
+
+    .promo-toolbar
+      margin-top: 35px;
+
+      .btn
+        font-family 'LatoWebBlack'
+        display inline-block
+        padding 11px 18px
+        color white
+        text-decoration none
+        font-size 18px
+        border 3px solid white
+        border-radius 25px
+        margin-right 20px
+
+        &:hover
+          opacity 0.8
+
+        &.free-lesson
+          background-color #f26a0f
+          border-color #f26a0f
+
+  .commercial
+    flex 0 0 550px
+    padding-left 180px
+    margin-top 42px
+    box-sizing border-box
+
+    .logo
+      font-size 32px
+
+      a
+        color white
+        text-transform uppercase
+        text-decoration none
+
+        &:hover
+          color #FFFEC9
+
+    .description
+      font-size 18px
+      margin-top 15px
