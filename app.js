@@ -11,6 +11,7 @@ let path = require('path');
 let fs = require('fs');
 
 // Controllers
+let aboutController = require('./controllers/about');
 let homeController = require('./controllers/home');
 let teacherController = require('./controllers/teacher');
 let instrumentController = require('./controllers/instrument');
@@ -38,7 +39,10 @@ app.use(serve(__dirname + '/public'));
 
 router
     .get('/', function*() {
-        yield homeController.index.bind(this);
+        yield homeController.index.bind(this, router);
+    })
+    .get('about', '/about', function*() {
+        yield aboutController.index.bind(this, router);
     })
     .get('/contacts', function *() {
     })

@@ -1,106 +1,12 @@
-@font-face
-  font-family 'LatoWeb'
-  font-style normal
-  font-weight normal
-  src url('/Lato/fonts/Lato-Regular.woff2')
-  src url('/Lato/fonts/Lato-Regular.woff')
-  src url('/Lato/fonts/Lato-Regular.ttf')
-  text-rendering optimizeLegibility
-
-@font-face
-  font-family 'LatoWebThin'
-  font-style normal
-  font-weight normal
-  src url('/Lato/fonts/Lato-Thin.woff2')
-  src url('/Lato/fonts/Lato-Thin.woff')
-  src url('/Lato/fonts/Lato-Thin.ttf')
-  text-rendering optimizeLegibility
-
-@font-face
-  font-family 'LatoWebBlack'
-  font-style normal
-  font-weight normal
-  src url('/Lato/fonts/Lato-Black.woff2')
-  src url('/Lato/fonts/Lato-Black.woff')
-  src url('/Lato/fonts/Lato-Black.ttf')
-  text-rendering optimizeLegibility
-
 body
   height 100vh
-  background-color #0b0d0d
   margin 0
   padding 0
   font-family 'LatoWeb'
-  background: url(/home-background.jpg) no-repeat center center
+  background: black url(/home-background.jpg) no-repeat center center
   background-size cover
 
-//  Главное меню
-.site-toolbar
-  display flex
-  height 110px
-  align-items center
-
-  .logo
-    flex 0 0 170px
-    height 45px
-
-    .logo-img
-      display block
-      margin-left 40px
-      width 95px
-      height 100%
-      background url(/logo.png) 100% 100% no-repeat
-
-  .main-menu-wrapper
-    width 100%
-    font-size 14pt
-
-    .main-menu
-      display flex
-      min-width 550px
-      justify-content center
-      padding 0
-      text-transform uppercase
-      font-size 14px
-      font-family 'LatoWebBlack'
-
-      .main-menu-section
-        list-style none
-        padding 0 10px
-
-        a
-          color white
-          text-decoration none
-
-          &:hover
-            color #FFFEC9
-
-  .contacts
-    display flex
-    align-items center
-    flex 0 0 240px
-    height 45px
-
-    .phone
-      display block
-      color white
-      text-decoration none
-
-    .map-label
-      display block
-      background url('/map-label.png') no-repeat 12px 10px
-      background-color white
-      height 40px
-      width 40px
-      border-radius 50%
-      opacity 0.15
-      margin-left 20px
-
-      &:hover
-        opacity 1
-
-
-//  Информация для главной
+//  РРЅС„РѕСЂРјР°С†РёСЏ РґР»СЏ РіР»Р°РІРЅРѕР№
 .main-info
   display flex
   width 1100px
@@ -108,7 +14,7 @@ body
   color white
 
   .main-brand-info
-    flex 0 0 550px
+    flex 0 0 600px
 
     .name-en
       font-family 'LatoWebBlack'
@@ -138,22 +44,7 @@ body
       margin-top: 35px;
 
       .btn
-        font-family 'LatoWebBlack'
-        display inline-block
-        padding 11px 18px
-        color white
-        text-decoration none
-        font-size 18px
-        border 3px solid white
-        border-radius 25px
         margin-right 20px
-
-        &:hover
-          opacity 0.8
-
-        &.free-lesson
-          background-color #f26a0f
-          border-color #f26a0f
 
   .commercial
     flex 0 0 550px
@@ -175,3 +66,104 @@ body
     .description
       font-size 18px
       margin-top 15px
+
+.about-info
+  color white
+  display flex
+  justify-content center
+  margin-top 80px
+  margin-bottom 80px
+
+  .school-description
+    width 640px
+
+    .title
+      font-size 80px
+      font-family 'LatoWebBlack'
+
+    .description
+      margin-top 10px
+
+      .thesis
+        font-size 32px
+
+      .quote-wrapper
+        display flex
+        justify-content flex-end
+        margin-top 40px
+        margin-bottom 40px
+
+        .quote
+          border-left 3px solid white
+          padding-left 10px
+          padding-top 6px
+          width 350px
+          font-size 16px
+          font-style italic
+
+          p
+            margin-bottom 6px
+
+      .detail-description
+        margin-bottom 10px
+        line-height 22px
+
+        p
+          margin-bottom 10px
+
+          .make-louder
+            font-size 20px
+            font-family 'LatoWebBlack'
+
+        ul
+          li
+            padding-left 20px
+            margin-bottom 10px
+
+  .commercial
+    width 300px
+    margin-left 80px
+
+    .repetirui
+      margin-top 15px
+
+      .repetirui-title
+        display flex
+        align-items flex-end
+
+        .repetirui-icon
+          background url('/repetirui.png') no-repeat center center
+          width 50px
+          height 50px
+          margin-right 10px
+
+        a
+          font-size 26px
+          font-family 'LatoWebBlack'
+          text-transform uppercase
+          color white
+
+      .repetirui-description
+        margin-top 20px
+        line-height 24px
+
+    .try-it
+      margin-top 30px
+
+      .try-it-title
+        display flex
+        align-items center
+        font-size 26px
+        font-family 'LatoWebBlack'
+
+        .try-it-icon
+          background url('/try-it.png') no-repeat center center
+          width 31px
+          height 31px
+          margin-right 10px
+
+      .try-it-buttons
+        margin-top 20px
+
+        .btn
+          margin-bottom 15px
