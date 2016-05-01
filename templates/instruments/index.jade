@@ -1,12 +1,22 @@
 extends ../blocks/main
 
 block body
-    h1 Инструменты
-
-    if instruments && instruments.length
-        each instrument in instruments
-            h2
-                a(href=router.url('instrument', instrument.slug))= instrument.title
-
-            each teacher in instrument.formattedTeachers
-                a(href=router.url('teacher', teacher.slug))= teacher.name
+    div.instruments
+        div.title Направления
+        div.instruments-list
+            if instruments && instruments.length
+                each instrument in instruments
+                    div.instrument
+                        div.instrument-description
+                            div.instrument-name
+                                a(href=router.url('instrument', instrument.slug))= instrument.title
+                            div.instrument-specification
+                                =instrument.description
+                        div.teacher
+                            each teacher in instrument.formattedTeachers
+                                div.teacher-photo
+                                    img(src=teacher.photo_src class='colored')
+                                div.teacher-name
+                                    div.teacher-title
+                                        Преподаватель курса
+                                    a(href=router.url('teacher', teacher.slug) class='teacher-fullname')= teacher.name

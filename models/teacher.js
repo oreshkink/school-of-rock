@@ -14,6 +14,9 @@ let teacherSchema = new mongoose.Schema({
     slug: {
         type: String,
         required: 'SLUG обязателен'
+    },
+    photo_src: {
+        type: String
     }
 });
 

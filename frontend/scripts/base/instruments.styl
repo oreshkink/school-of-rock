@@ -1,0 +1,71 @@
+.instruments
+  width 1110px
+  margin auto
+  color #EEEEEE
+  margin-top 80px
+  margin-bottom 80px
+
+  a
+    color white
+
+  .title
+    font-family 'LatoWebBlack'
+    font-size 80px
+
+  .instruments-list
+    margin-top 45px
+    font-family 'LatoWebThin'
+
+    .instrument
+      display flex
+      padding 40px
+      background-color rgba(16, 70, 93, 0.4)
+
+      .instrument-description
+        flex 0 0 610px
+
+        .instrument-name
+          font-size 48px
+          margin-bottom 30px
+
+        .instrument-specification
+          font-size 20px
+          line-height 25px
+
+      .teacher
+        width 100%
+        display flex
+        align-items center
+        margin-left: 50px;
+
+        .teacher-photo
+          flex 0 0 150px
+
+          img
+            width 100%
+            height 100%
+
+            &.colored
+              display block
+
+        .teacher-name
+          margin-left 20px
+
+          .teacher-title
+            font-family 'LatoWeb'
+            font-size 16px
+            text-transform uppercase
+            margin-bottom 10px
+
+          .teacher-fullname
+            font-size 22px
+
+      &:nth-child(2n)
+        background none
+
+      &:hover
+        .teacher
+          .teacher-photo
+            img
+              &.colored
+                display block
