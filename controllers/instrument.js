@@ -6,6 +6,8 @@ let jade = require('jade');
 let Teacher = require('../models/teacher');
 let Instrument = require('../models/instrument');
 let InstrumentTeacher = require('../models/instrument_teacher');
+let MarkdownIt = require('markdown-it');
+let md = new MarkdownIt();
 
 module.exports = {
     index: function* (router) {
@@ -25,7 +27,7 @@ module.exports = {
 
         let teachersSlugs = [];
 
-        // Ïîëó÷àåì ñïèñîê âñåõ ïðåïîäàâàòåëåé äëÿ îäíîãî çàïðîñà
+        // ÐŸÐ¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ ÑÐ¿Ð¸ÑÐ¾Ðº Ð²ÑÐµÑ… Ð¿Ñ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¹ Ð´Ð»Ñ Ð¾Ð´Ð½Ð¾Ð³Ð¾ Ð·Ð°Ð¿Ñ€Ð¾ÑÐ°
         instruments.forEach(instrument => {
             if (!instrument.instrumentTeachers) {
                 return;
@@ -33,14 +35,13 @@ module.exports = {
 
             teachersSlugs = teachersSlugs.concat(
                 instrument.instrumentTeachers.map(
-                        instrumentTeacher =>  {
+                    instrumentTeacher =>  {
                         return instrumentTeacher.teacherSlug;
                     }
                 )
             );
         });
 
-        // Çàïðîñ íà ïîëó÷åíèå îïèñàíèÿ èíñòðóìåíòîâ
         const teachers =
             yield Teacher.model.find(
                 {
@@ -49,7 +50,7 @@ module.exports = {
             )
             .exec();
 
-        // Äîáàâëÿåì ïðåïîäàâàòåëåé ê êàæäîìó èíñòðóìåíòó
+        // Ð”Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼ Ð¿Ñ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¹ Ðº ÐºÐ°Ð¶Ð´Ð¾Ð¼Ñƒ Ð¸Ð½ÑÑ‚Ñ€ÑƒÐ¼ÐµÐ½Ñ‚Ñƒ
         instruments.forEach((instrument, i) => {
             let teachersSlugs = instrument.instrumentTeachers.map(
                     instrumentTeacher => {
@@ -88,7 +89,7 @@ module.exports = {
                         from: 'instrumentteachers',
                         localField: 'slug',
                         foreignField: 'instrumentSlug',
-                        as: 'instrumentTeachers'
+                        as: 'teachers'
                     }
                 }
             ])
@@ -96,7 +97,31 @@ module.exports = {
 
         !instruments.length && this.throw(404);
 
+        // ÐŸÐ¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ ÑÐ¿Ð¸ÑÐ¾Ðº Ð²ÑÐµÑ… Ð¿Ñ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¹ Ð´Ð»Ñ Ð¾Ð´Ð½Ð¾Ð³Ð¾ Ð·Ð°Ð¿Ñ€Ð¾ÑÐ°
+        let teachersSlugs = [];
+
+        instruments.forEach(
+                instrument => {
+                    teachersSlugs = teachersSlugs.concat(
+                        instrument.teachers.map(
+                            instrumentTeacher =>  {
+                                return instrumentTeacher.teacherSlug;
+                            }
+                        )
+                    );
+            }
+        );
+
+        const teachers = yield Teacher.model.find(
+                {
+                    slug: { $in: teachersSlugs }
+                }
+            )
+            .exec();
+
         const instrument = instruments.shift();
+
+        instrument.extendedDescription = md.render(instrument.extendedDescription);
 
         instruments = yield Instrument.model
             .find(
@@ -112,6 +137,7 @@ module.exports = {
             {
                 instrument,
                 instruments,
+                teachers,
                 router
             }
         );

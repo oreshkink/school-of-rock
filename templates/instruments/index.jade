@@ -17,6 +17,5 @@ block body
                                 div.teacher-photo
                                     img(src=teacher.photo_src class='colored')
                                 div.teacher-name
-                                    div.teacher-title
-                                        Преподаватель курса
+                                    div.teacher-title Преподаватель курса
                                     a(href=router.url('teacher', teacher.slug) class='teacher-fullname')= teacher.name

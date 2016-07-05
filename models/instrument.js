@@ -11,6 +11,14 @@ let instrumentSchema = new mongoose.Schema({
         type: String,
         required: 'Описание направления обязательно'
     },
+    previewDescription: {
+        type: String,
+        required: 'Описание направления обязательно'
+    },
+    extendedDescription: {
+        type: String,
+        required: 'Описание направления обязательно'
+    },
     slug: {
         type: String,
         required: 'Slug обязателен'

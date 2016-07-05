@@ -1,13 +1,32 @@
 extends ../blocks/main
 
+- var infoPath = '../../instruments-info/' + teacher.slug + '.md'
+
 block body
-    h1= instrument.title
+    div.instrument-detail-page
+        div.main
+            div.title=instrument.title
 
-    div
-        a(href=router.url('instruments')) Список инструментов
+            if teachers && teachers.length
+                ul.teachers
+                    each teacher in teachers
+                        li
+                            a(href=router.url('teacher', teacher.slug))= teacher.name
 
-    if instruments && instruments.length
-        ul
-            each instrument in instruments
-                li
-                    a(href=router.url('instrument', instrument.slug))= instrument.title
+            div.markdown
+                !{instrument.extendedDescription}
+
+        div.additional
+            if instruments && instruments.length
+                ul.instruments
+                    each instrument in instruments
+                        li
+                            a(href=router.url('instrument', instrument.slug))= instrument.title
+
+            div.try-it
+                div.try-it-title
+                    div.try-it-icon
+                    span Попробуйте
+                div.try-it-buttons
+                    a(class='btn free-lesson' href='#') Бесплатный урок
+                    a(class='btn phone-me' href='#') Позвоните мне!

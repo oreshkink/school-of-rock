@@ -1,11 +1,12 @@
 require('./reset.styl');
 
-require('./fonts.styl');
+require('./patterns/layout.styl');
+require('./patterns/buttons.styl');
+require('./patterns/toolbar.styl');
+require('./patterns/fonts.styl');
+require('./patterns/markdown.styl');
 
-require('./buttons.styl');
-
-require('./base.styl');
-require('./toolbar.styl');
-
-require('./about.styl');
-require('./instruments.styl');
+//require('./routes/about.styl');
+require('./routes/index.styl');
+require('./routes/instrument.styl');
+//require('./routes/instruments.styl');

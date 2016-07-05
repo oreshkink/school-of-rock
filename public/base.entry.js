@@ -49,14 +49,15 @@
 	__webpack_require__(1);
 
 	__webpack_require__(5);
-
-	__webpack_require__(9);
-
 	__webpack_require__(7);
+	__webpack_require__(9);
 	__webpack_require__(11);
+	__webpack_require__(21);
 
-	__webpack_require__(13);
+	//require('./routes/about.styl');
 	__webpack_require__(15);
+	__webpack_require__(17);
+	//require('./routes/instruments.styl');
 
 /***/ },
 /* 1 */
@@ -424,8 +425,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./fonts.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./fonts.styl");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./layout.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./layout.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -443,7 +444,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'LatoWeb';\n  font-style: normal;\n  font-weight: normal;\n  src: url(\"/Lato/fonts/Lato-Regular.woff2\");\n  src: url(\"/Lato/fonts/Lato-Regular.woff\");\n  src: url(\"/Lato/fonts/Lato-Regular.ttf\");\n  text-rendering: optimizeLegibility;\n}\n@font-face {\n  font-family: 'LatoWebThin';\n  font-style: normal;\n  font-weight: normal;\n  src: url(\"/Lato/fonts/Lato-Thin.woff2\");\n  src: url(\"/Lato/fonts/Lato-Thin.woff\");\n  src: url(\"/Lato/fonts/Lato-Thin.ttf\");\n  text-rendering: optimizeLegibility;\n}\n@font-face {\n  font-family: 'LatoWebBlack';\n  font-style: normal;\n  font-weight: normal;\n  src: url(\"/Lato/fonts/Lato-Black.woff2\");\n  src: url(\"/Lato/fonts/Lato-Black.woff\");\n  src: url(\"/Lato/fonts/Lato-Black.ttf\");\n  text-rendering: optimizeLegibility;\n}\n@font-face {\n  font-family: 'LatoWeb';\n  font-style: italic;\n  font-weight: normal;\n  src: url(\"/Lato/fonts/Lato-Italic.woff2\");\n  src: url(\"/Lato/fonts/Lato-Italic.woff\");\n  src: url(\"/Lato/fonts/Lato-Italic.ttf\");\n  text-rendering: optimizeLegibility;\n}\n", ""]);
+	exports.push([module.id, "body {\n  height: 100vh;\n  margin: 0;\n  padding: 0;\n  font-family: 'LatoWeb';\n  background: #000 url(\"/home-background.jpg\") no-repeat center center;\n  background-size: cover;\n}\na {\n  color: #fff;\n}\n", ""]);
 
 	// exports
 
@@ -464,8 +465,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./base.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./base.styl");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./buttons.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./buttons.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -483,7 +484,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  height: 100vh;\n  margin: 0;\n  padding: 0;\n  font-family: 'LatoWeb';\n  background: #000 url(\"/home-background.jpg\") no-repeat center center;\n  background-size: cover;\n}\n.main-info {\n  display: flex;\n  width: 1100px;\n  margin: 180px auto auto auto;\n  color: #fff;\n}\n.main-info .main-brand-info {\n  flex: 0 0 600px;\n}\n.main-info .main-brand-info .name-en {\n  font-family: 'LatoWebBlack';\n  font-size: 85px;\n}\n.main-info .main-brand-info .name-ru {\n  font-family: 'LatoWebThin';\n  margin-top: -10px;\n  font-size: 72px;\n  font-weight: 100;\n}\n.main-info .main-brand-info .description {\n  font-family: 'LatoWebThin';\n  margin-top: 20px;\n  font-size: 20px;\n  line-height: 24px;\n}\n.main-info .main-brand-info .read-more {\n  margin-top: 25px;\n}\n.main-info .main-brand-info .read-more a {\n  font-size: 19px;\n  color: #a89891;\n}\n.main-info .main-brand-info .promo-toolbar {\n  margin-top: 35px;\n}\n.main-info .main-brand-info .promo-toolbar .btn {\n  margin-right: 20px;\n}\n.main-info .commercial {\n  flex: 0 0 550px;\n  padding-left: 180px;\n  margin-top: 42px;\n  box-sizing: border-box;\n}\n.main-info .commercial .logo {\n  font-size: 32px;\n}\n.main-info .commercial .logo a {\n  color: #fff;\n  text-transform: uppercase;\n  text-decoration: none;\n}\n.main-info .commercial .logo a:hover {\n  color: #fffec9;\n}\n.main-info .commercial .description {\n  font-size: 18px;\n  margin-top: 15px;\n}\n", ""]);
+	exports.push([module.id, ".btn {\n  font-family: 'LatoWebBlack';\n  display: inline-block;\n  padding: 11px 18px;\n  color: #fff;\n  text-decoration: none;\n  text-align: center;\n  width: 185px;\n  font-size: 18px;\n  border: 3px solid #fff;\n  border-radius: 25px;\n}\n.btn:hover {\n  opacity: 0.8;\n}\n.btn.free-lesson {\n  background-color: #f26a0f;\n  border-color: #f26a0f;\n}\n", ""]);
 
 	// exports
 
@@ -504,8 +505,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./buttons.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./buttons.styl");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./toolbar.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./toolbar.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -523,7 +524,7 @@
 
 
 	// module
-	exports.push([module.id, ".btn {\n  font-family: 'LatoWebBlack';\n  display: inline-block;\n  padding: 11px 18px;\n  color: #fff;\n  text-decoration: none;\n  text-align: center;\n  width: 185px;\n  font-size: 18px;\n  border: 3px solid #fff;\n  border-radius: 25px;\n}\n.btn:hover {\n  opacity: 0.8;\n}\n.btn.free-lesson {\n  background-color: #f26a0f;\n  border-color: #f26a0f;\n}\n", ""]);
+	exports.push([module.id, ".site-toolbar {\n  display: flex;\n  height: 110px;\n  align-items: center;\n}\n.site-toolbar .logo {\n  flex: 0 0 170px;\n  height: 45px;\n}\n.site-toolbar .logo .logo-img {\n  display: block;\n  margin-left: 40px;\n  width: 95px;\n  height: 100%;\n  background: url(\"/logo.png\") 100% 100% no-repeat;\n}\n.site-toolbar .main-menu-wrapper {\n  width: 100%;\n  font-size: 14pt;\n}\n.site-toolbar .main-menu-wrapper .main-menu {\n  display: flex;\n  min-width: 600px;\n  justify-content: center;\n  padding: 0;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-family: 'LatoWebBlack';\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section {\n  list-style: none;\n  padding: 0 10px;\n  margin: 0;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a {\n  color: #fff;\n  text-decoration: none;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a:hover {\n  color: #fffec9;\n}\n.site-toolbar .contacts {\n  display: flex;\n  align-items: center;\n  flex: 0 0 240px;\n  height: 45px;\n}\n.site-toolbar .contacts .phone {\n  display: block;\n  color: #fff;\n  text-decoration: none;\n}\n.site-toolbar .contacts .map-label {\n  display: block;\n  background: url(\"/map-label.png\") no-repeat 12px 10px;\n  background-color: #fff;\n  height: 40px;\n  width: 40px;\n  border-radius: 50%;\n  opacity: 0.15;\n  margin-left: 20px;\n}\n.site-toolbar .contacts .map-label:hover {\n  opacity: 1;\n}\n", ""]);
 
 	// exports
 
@@ -544,8 +545,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./toolbar.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./toolbar.styl");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./fonts.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./fonts.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -563,52 +564,14 @@
 
 
 	// module
-	exports.push([module.id, ".site-toolbar {\n  display: flex;\n  height: 110px;\n  align-items: center;\n}\n.site-toolbar .logo {\n  flex: 0 0 170px;\n  height: 45px;\n}\n.site-toolbar .logo .logo-img {\n  display: block;\n  margin-left: 40px;\n  width: 95px;\n  height: 100%;\n  background: url(\"/logo.png\") 100% 100% no-repeat;\n}\n.site-toolbar .main-menu-wrapper {\n  width: 100%;\n  font-size: 14pt;\n}\n.site-toolbar .main-menu-wrapper .main-menu {\n  display: flex;\n  min-width: 600px;\n  justify-content: center;\n  padding: 0;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-family: 'LatoWebBlack';\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section {\n  list-style: none;\n  padding: 0 10px;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a {\n  color: #fff;\n  text-decoration: none;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a:hover {\n  color: #fffec9;\n}\n.site-toolbar .contacts {\n  display: flex;\n  align-items: center;\n  flex: 0 0 240px;\n  height: 45px;\n}\n.site-toolbar .contacts .phone {\n  display: block;\n  color: #fff;\n  text-decoration: none;\n}\n.site-toolbar .contacts .map-label {\n  display: block;\n  background: url(\"/map-label.png\") no-repeat 12px 10px;\n  background-color: #fff;\n  height: 40px;\n  width: 40px;\n  border-radius: 50%;\n  opacity: 0.15;\n  margin-left: 20px;\n}\n.site-toolbar .contacts .map-label:hover {\n  opacity: 1;\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'LatoWeb';\n  font-style: normal;\n  font-weight: normal;\n  src: url(\"/Lato/fonts/Lato-Regular.woff2\");\n  src: url(\"/Lato/fonts/Lato-Regular.woff\");\n  src: url(\"/Lato/fonts/Lato-Regular.ttf\");\n  text-rendering: optimizeLegibility;\n}\n@font-face {\n  font-family: 'LatoWebThin';\n  font-style: normal;\n  font-weight: normal;\n  src: url(\"/Lato/fonts/Lato-Thin.woff2\");\n  src: url(\"/Lato/fonts/Lato-Thin.woff\");\n  src: url(\"/Lato/fonts/Lato-Thin.ttf\");\n  text-rendering: optimizeLegibility;\n}\n@font-face {\n  font-family: 'LatoWebBlack';\n  font-style: normal;\n  font-weight: normal;\n  src: url(\"/Lato/fonts/Lato-Black.woff2\");\n  src: url(\"/Lato/fonts/Lato-Black.woff\");\n  src: url(\"/Lato/fonts/Lato-Black.ttf\");\n  text-rendering: optimizeLegibility;\n}\n@font-face {\n  font-family: 'LatoWeb';\n  font-style: italic;\n  font-weight: normal;\n  src: url(\"/Lato/fonts/Lato-Italic.woff2\");\n  src: url(\"/Lato/fonts/Lato-Italic.woff\");\n  src: url(\"/Lato/fonts/Lato-Italic.ttf\");\n  text-rendering: optimizeLegibility;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(14);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./about.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./about.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".about-info {\n  color: #fff;\n  display: flex;\n  justify-content: center;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.about-info .school-description {\n  width: 640px;\n}\n.about-info .school-description .title {\n  font-size: 80px;\n  font-family: 'LatoWebBlack';\n}\n.about-info .school-description .description {\n  margin-top: 10px;\n}\n.about-info .school-description .description .thesis {\n  font-size: 32px;\n}\n.about-info .school-description .description .quote-wrapper {\n  display: flex;\n  justify-content: flex-end;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n.about-info .school-description .description .quote-wrapper .quote {\n  border-left: 3px solid #fff;\n  padding-left: 10px;\n  padding-top: 6px;\n  width: 350px;\n  font-size: 16px;\n  font-style: italic;\n}\n.about-info .school-description .description .quote-wrapper .quote p {\n  margin-bottom: 6px;\n}\n.about-info .school-description .description .detail-description {\n  margin-bottom: 10px;\n  line-height: 22px;\n}\n.about-info .school-description .description .detail-description p {\n  margin-bottom: 10px;\n}\n.about-info .school-description .description .detail-description p .make-louder {\n  font-size: 20px;\n  font-family: 'LatoWebBlack';\n}\n.about-info .school-description .description .detail-description ul li {\n  padding-left: 20px;\n  margin-bottom: 10px;\n}\n.about-info .commercial {\n  width: 300px;\n  margin-left: 80px;\n}\n.about-info .commercial .repetirui {\n  margin-top: 15px;\n}\n.about-info .commercial .repetirui .repetirui-title {\n  display: flex;\n  align-items: flex-end;\n}\n.about-info .commercial .repetirui .repetirui-title .repetirui-icon {\n  background: url(\"/repetirui.png\") no-repeat center center;\n  width: 50px;\n  height: 50px;\n  margin-right: 10px;\n}\n.about-info .commercial .repetirui .repetirui-title a {\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n  text-transform: uppercase;\n  color: #fff;\n}\n.about-info .commercial .repetirui .repetirui-description {\n  margin-top: 20px;\n  line-height: 24px;\n}\n.about-info .commercial .try-it {\n  margin-top: 30px;\n}\n.about-info .commercial .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.about-info .commercial .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.about-info .commercial .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.about-info .commercial .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
+/* 13 */,
+/* 14 */,
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -624,8 +587,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./instruments.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./instruments.styl");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./index.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./index.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -643,7 +606,89 @@
 
 
 	// module
-	exports.push([module.id, ".instruments {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.instruments a {\n  color: #fff;\n}\n.instruments .title {\n  font-family: 'LatoWebBlack';\n  font-size: 80px;\n}\n.instruments .instruments-list {\n  margin-top: 45px;\n  font-family: 'LatoWebThin';\n}\n.instruments .instruments-list .instrument {\n  display: flex;\n  padding: 40px;\n  background-color: rgba(16,70,93,0.4);\n}\n.instruments .instruments-list .instrument .instrument-description {\n  flex: 0 0 610px;\n}\n.instruments .instruments-list .instrument .instrument-description .instrument-name {\n  font-size: 48px;\n  margin-bottom: 30px;\n}\n.instruments .instruments-list .instrument .instrument-description .instrument-specification {\n  font-size: 20px;\n  line-height: 25px;\n}\n.instruments .instruments-list .instrument .teacher {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  margin-left: 50px;\n}\n.instruments .instruments-list .instrument .teacher .teacher-photo {\n  flex: 0 0 150px;\n}\n.instruments .instruments-list .instrument .teacher .teacher-photo img {\n  width: 100%;\n  height: 100%;\n}\n.instruments .instruments-list .instrument .teacher .teacher-photo img.colored {\n  display: block;\n}\n.instruments .instruments-list .instrument .teacher .teacher-name {\n  margin-left: 20px;\n}\n.instruments .instruments-list .instrument .teacher .teacher-name .teacher-title {\n  font-family: 'LatoWeb';\n  font-size: 16px;\n  text-transform: uppercase;\n  margin-bottom: 10px;\n}\n.instruments .instruments-list .instrument .teacher .teacher-name .teacher-fullname {\n  font-size: 22px;\n}\n.instruments .instruments-list .instrument:nth-child(2n) {\n  background: none;\n}\n.instruments .instruments-list .instrument:hover .teacher .teacher-photo img.colored {\n  display: block;\n}\n", ""]);
+	exports.push([module.id, ".main-info {\n  display: flex;\n  width: 1100px;\n  margin: 180px auto auto auto;\n  color: #fff;\n}\n.main-info .main-brand-info {\n  flex: 0 0 600px;\n}\n.main-info .main-brand-info .name-en {\n  font-family: 'LatoWebBlack';\n  font-size: 85px;\n}\n.main-info .main-brand-info .name-ru {\n  font-family: 'LatoWebThin';\n  margin-top: -10px;\n  font-size: 72px;\n  font-weight: 100;\n}\n.main-info .main-brand-info .description {\n  font-family: 'LatoWebThin';\n  margin-top: 20px;\n  font-size: 20px;\n  line-height: 24px;\n}\n.main-info .main-brand-info .read-more {\n  margin-top: 25px;\n}\n.main-info .main-brand-info .read-more a {\n  font-size: 19px;\n  color: #a89891;\n}\n.main-info .main-brand-info .promo-toolbar {\n  margin-top: 35px;\n}\n.main-info .main-brand-info .promo-toolbar .btn {\n  margin-right: 20px;\n}\n.main-info .commercial {\n  flex: 0 0 550px;\n  padding-left: 180px;\n  margin-top: 42px;\n  box-sizing: border-box;\n}\n.main-info .commercial .logo {\n  font-size: 32px;\n}\n.main-info .commercial .logo a {\n  color: #fff;\n  text-transform: uppercase;\n  text-decoration: none;\n}\n.main-info .commercial .logo a:hover {\n  color: #fffec9;\n}\n.main-info .commercial .description {\n  font-size: 18px;\n  margin-top: 15px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(18);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./instrument.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./instrument.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".instrument-detail-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n  display: flex;\n  justify-content: space-between;\n}\n.instrument-detail-page .main {\n  flex: 0 0 640px;\n}\n.instrument-detail-page .main .title {\n  font-family: 'LatoWebBlack';\n  font-size: 80px;\n}\n.instrument-detail-page .main .teachers {\n  margin: 15px 0;\n  font-size: 40px;\n  font-family: 'LatoWebThin';\n}\n.instrument-detail-page .additional {\n  flex: 0 0 380px;\n}\n.instrument-detail-page .additional .instruments {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .instruments li {\n  margin: 8px 0;\n}\n.instrument-detail-page .additional .try-it {\n  margin-top: 30px;\n}\n.instrument-detail-page .additional .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.instrument-detail-page .additional .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 19 */,
+/* 20 */,
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(22);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./markdown.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./markdown.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".markdown {\n  margin: 40px 0;\n}\n.markdown h2 {\n  font-size: 32px;\n  font-weight: normal;\n}\n.markdown h3 {\n  font-size: 20px;\n  font-weight: normal;\n}\n.markdown ul {\n  margin: 20px 0;\n}\n.markdown ul li {\n  margin: 5px 0 5px 25px;\n  list-style: disc;\n}\n.markdown ul ul {\n  margin: 10px 0;\n}\n.markdown ul ul li {\n  list-style: circle;\n  margin: 5px 0 5px 20px;\n}\n.markdown blockquote {\n  line-height: 1.4em;\n  width: 500px;\n  padding: 10px 20px;\n  margin: 0 0 20px;\n  font-size: 18px;\n  border-left: 5px solid #eee;\n}\n.markdown hr {\n  margin-top: 10px;\n  margin-bottom: 30px;\n  border: 0;\n  border-top: 2px solid #676767;\n}\n", ""]);
 
 	// exports
 
