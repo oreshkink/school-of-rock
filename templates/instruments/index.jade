@@ -1,14 +1,16 @@
 extends ../blocks/main
 
 block body
-    div.instruments
-        div.title Направления
+    div.instruments-list-page
+
+        h1.title Преподаваемые направления в "Школе рока"
+
         div.instruments-list
             if instruments && instruments.length
                 each instrument in instruments
                     div.instrument
                         div.instrument-description
-                            div.instrument-name
+                            h2.instrument-name
                                 a(href=router.url('instrument', instrument.slug))= instrument.title
                             div.instrument-specification
                                 =instrument.description

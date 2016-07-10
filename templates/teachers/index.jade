@@ -1,8 +1,22 @@
 extends ../blocks/main
 
 block body
-    h1 Список преподавателей
-    if teachers.length
-        each teacher in teachers
-            h2
-                a(href=router.url('teacher', teacher.slug))= teacher.name
+    div.teachers-list-page
+        h1 Преподаватели «Школы рока»
+
+        if teachers.length
+            div.teachers-list.owl-carousel.owl-theme
+                each teacher in teachers
+                    a(href=router.url('teacher', teacher.slug))
+                        div.teacher
+                            div.description
+                                div.name
+                                    =teacher.name
+
+                                    span.instrument
+                                        each instrument in teacher.formattedInstruments
+                                            =instrument.title
+
+                            div.photo
+                                img.colored(src='/teachers-list-photos/bass.jpg')
+                                img.bw(src='/teachers-list-photos/bass-bw.jpg')

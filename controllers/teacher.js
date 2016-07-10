@@ -25,15 +25,12 @@ module.exports = {
 
         let instrumentsSlugs = [];
 
+
         // ѕолучаем список всех инструментов дл€ одного запроса
         teachers.forEach(teacher => {
-            if (teacher.teacherInstruments) {
-                return;
-            }
-
             instrumentsSlugs = instrumentsSlugs.concat(
                 teacher.teacherInstruments.map(
-                        teacherInstrument => {
+                    teacherInstrument => {
                         return teacherInstrument.instrumentSlug;
                     }
                 )
@@ -47,22 +44,23 @@ module.exports = {
                     slug: { $in: instrumentsSlugs }
                 }
             )
-                .exec();
+            .exec();
 
         // ƒобавл€ем инструменты к каждому преподавателю
         teachers.forEach((teacher, i) => {
             let instrumentsSlugs = teacher.teacherInstruments.map(
-                    teacherInstrument => {
+                teacherInstrument => {
                     return teacherInstrument.instrumentSlug;
                 }
             );
 
             teachers[i].formattedInstruments = instruments.filter(
-                    instrument => {
+                instrument => {
                     return ~instrumentsSlugs.indexOf(instrument.slug);
                 }
             );
         });
+
 
         this.body = jade.renderFile(
             'templates/teachers/index.jade',

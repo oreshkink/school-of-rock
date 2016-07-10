@@ -1,0 +1,48 @@
+.teachers-list-page
+  width 1110px
+  margin auto
+  color #EEEEEE
+  margin-top 80px
+  margin-bottom 80px
+
+  .teachers-list
+    margin 50px 0
+
+    .teacher
+      display flex
+      width 150px
+      height 450px
+
+      .description
+        flex 0 0 30px
+        height 100%
+        position relative
+
+        .name
+          transform rotate(90deg)
+          transform-origin left top 0
+          width 400px
+          position absolute
+          left 23px
+
+          .instrument
+            &:before
+              margin 0 10px
+              content '|'
+
+      .photo
+        .bw
+          display block
+        .colored
+          display none
+
+      &:hover
+        .description
+          color #f26a0f
+          font-weight bold
+
+        .photo
+          .bw
+            display none
+          .colored
+            display block
