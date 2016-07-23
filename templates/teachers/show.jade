@@ -1,22 +1,26 @@
 extends ../blocks/main
 
 block body
-    h1
-        a(href=router.url('teachers')) Список преподавателей
+    div.teacher-detail-page
+        div.main
+            if teacherInstruments.length
+                each teacherInstrument in teacherInstruments
+                    h1= teacherInstrument.title
 
-    div.teacher.container
+            div.name= teacher.name
+            div.description
+                div.specification !{teacher.description}
 
-        div.name= teacher.name
-
-        div.description
-            div.title Описание преподавателя
-            div.specification !{teacher.description}
-
-        div.instruments
-            div.title Преподаваемые отделения
-
-            if instruments.length
+        div.additional
+            if otherInstruments && otherInstruments.length
                 ul.instruments
-                    each instrument in instruments
+                    each otherInstrument in otherInstruments
                         li
-                            a(href=router.url('instrument', instrument.slug))= instrument.title
+                            a(href=router.url('instrument', otherInstrument.slug))= otherInstrument.title
+            div.try-it
+                div.try-it-title
+                    div.try-it-icon
+                    span Попробуйте
+                div.try-it-buttons
+                    a(class='btn free-lesson' href='#') Бесплатный урок
+                    a(class='btn phone-me' href='#') Позвоните мне!

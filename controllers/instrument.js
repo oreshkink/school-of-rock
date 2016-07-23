@@ -119,7 +119,7 @@ module.exports = {
             )
             .exec();
 
-        const instrument = instruments.shift();
+        let instrument = instruments.shift();
 
         instrument.extendedDescription = md.render(instrument.extendedDescription);
 

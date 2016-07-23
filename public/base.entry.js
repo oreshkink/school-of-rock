@@ -68,6 +68,9 @@
 	// Список преподавателей
 	__webpack_require__(21);
 
+	// Список преподавателей
+	__webpack_require__(23);
+
 	$(function () {
 	    $('.teachers-list').owlCarousel({
 	        items: 6,
@@ -781,6 +784,46 @@
 
 	// module
 	exports.push([module.id, ".teachers-list-page {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.teachers-list-page .teachers-list {\n  margin: 50px 0;\n}\n.teachers-list-page .teachers-list .teacher {\n  display: flex;\n  width: 150px;\n  height: 450px;\n}\n.teachers-list-page .teachers-list .teacher .description {\n  flex: 0 0 30px;\n  height: 100%;\n  position: relative;\n}\n.teachers-list-page .teachers-list .teacher .description .name {\n  transform: rotate(90deg);\n  transform-origin: left top 0;\n  width: 400px;\n  position: absolute;\n  left: 23px;\n}\n.teachers-list-page .teachers-list .teacher .description .name .instrument:before {\n  margin: 0 10px;\n  content: '|';\n}\n.teachers-list-page .teachers-list .teacher .photo .bw {\n  display: block;\n}\n.teachers-list-page .teachers-list .teacher .photo .colored {\n  display: none;\n}\n.teachers-list-page .teachers-list .teacher:hover .description {\n  color: #f26a0f;\n  font-weight: bold;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .bw {\n  display: none;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .colored {\n  display: block;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(24);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./teacher.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./teacher.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".teacher-detail-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n  display: flex;\n  justify-content: space-between;\n}\n.teacher-detail-page .main {\n  flex: 0 0 640px;\n}\n.teacher-detail-page .additional {\n  flex: 0 0 380px;\n}\n.teacher-detail-page .additional .instruments {\n  margin-top: 20px;\n}\n.teacher-detail-page .additional .instruments li {\n  margin: 8px 0;\n}\n.teacher-detail-page .additional .try-it {\n  margin-top: 30px;\n}\n.teacher-detail-page .additional .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.teacher-detail-page .additional .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.teacher-detail-page .additional .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.teacher-detail-page .additional .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
 
 	// exports
 

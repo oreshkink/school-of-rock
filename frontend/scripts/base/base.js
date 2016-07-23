@@ -20,6 +20,9 @@ require('./routes/instrument.styl');
 // Список преподавателей
 require('./routes/teachers.styl');
 
+// Список преподавателей
+require('./routes/teacher.styl');
+
 $(function() {
     $('.teachers-list').owlCarousel({
         items: 6,

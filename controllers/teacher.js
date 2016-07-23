@@ -6,25 +6,24 @@ let jade = require('jade');
 let Teacher = require('../models/teacher');
 let Instrument = require('../models/instrument');
 let InstrumentTeacher = require('../models/instrument_teacher');
+let MarkdownIt = require('markdown-it');
+let md = new MarkdownIt();
 
 module.exports = {
     index: function *(router) {
-        let teachers =
-            yield Teacher.model
-                .aggregate([
-                    {
-                        $lookup: {
-                            from: 'instrumentteachers',
-                            localField: 'slug',
-                            foreignField: 'teacherSlug',
-                            as: 'teacherInstruments'
-                        }
-                    }
-                ])
-                .exec();
+        // Список преподавателей
+        let teachers = yield Teacher.model.aggregate([
+            {
+                $lookup: {
+                    from: 'instrumentteachers',
+                    localField: 'slug',
+                    foreignField: 'teacherSlug',
+                    as: 'teacherInstruments'
+                }
+            }
+        ]).exec();
 
         let instrumentsSlugs = [];
-
 
         // Получаем список всех инструментов для одного запроса
         teachers.forEach(teacher => {
@@ -38,13 +37,11 @@ module.exports = {
         });
 
         // Запрос на получение описания инструментов
-        const instruments =
-            yield Instrument.model.find(
-                {
-                    slug: { $in: instrumentsSlugs }
-                }
-            )
-            .exec();
+        const instruments = yield Instrument.model.find(
+            {
+                slug: { $in: instrumentsSlugs }
+            }
+        ).exec();
 
         // Добавляем инструменты к каждому преподавателю
         teachers.forEach((teacher, i) => {
@@ -61,7 +58,6 @@ module.exports = {
             );
         });
 
-
         this.body = jade.renderFile(
             'templates/teachers/index.jade',
             {
@@ -72,6 +68,7 @@ module.exports = {
     },
 
     show: function *(router) {
+        // Учитель
         const teachers = yield Teacher.model.aggregate(
             [
                 {
@@ -86,34 +83,48 @@ module.exports = {
                     }
                 }
             ]
-        ).exec();
+        );
 
         !teachers.length && this.throw(404);
 
-        const teacher = teachers.shift();
+        let teacher = teachers.shift();
+        let instrumentsSlugs = [],
+            teacherInstruments = [],
+            otherInstruments = [];
 
-        let instrumentsSlugs = [];
-        let instruments = [];
+        teacher.description = md.render(teacher.description);
 
+        // Преподаваемые инструменты
         if (teacher.teacherInstruments) {
             instrumentsSlugs = teacher.teacherInstruments.map(
-                    teacherInstrument => {
+                teacherInstrument => {
                     return teacherInstrument.instrumentSlug;
                 }
             );
 
-            instruments = yield Instrument.model.find(
+            teacherInstruments = yield Instrument.model
+                .find(
                 {
                     slug: { $in: instrumentsSlugs }
                 }
-            ).exec();
+            );
+
+            otherInstruments = yield InstrumKent.model
+                .find(
+                {
+                    slug: {
+                        $nin: instrumentsSlugs
+                    }
+                }
+            );
         }
 
         this.body = jade.renderFile(
             'templates/teachers/show.jade',
             {
                 teacher,
-                instruments,
+                teacherInstruments,
+                otherInstruments,
                 router
             }
         );
