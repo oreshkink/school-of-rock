@@ -109,7 +109,7 @@ module.exports = {
                 }
             );
 
-            otherInstruments = yield InstrumKent.model
+            otherInstruments = yield Instrument.model
                 .find(
                 {
                     slug: {

@@ -6,10 +6,11 @@ require('./patterns/toolbar.styl');
 require('./patterns/fonts.styl');
 require('./patterns/markdown.styl');
 
-//require('./routes/about.styl');
-
 // Главная страница сайта
 require('./routes/index.styl');
+
+// О школе
+require('./routes/about.styl');
 
 // Список направлений
 require('./routes/instruments.styl');
