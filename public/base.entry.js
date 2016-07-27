@@ -57,6 +57,9 @@
 	// Главная страница сайта
 	__webpack_require__(15);
 
+	// Контакты
+	__webpack_require__(27);
+
 	// О школе
 	__webpack_require__(17);
 
@@ -865,6 +868,46 @@
 
 	// module
 	exports.push([module.id, ".teacher-detail-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n  display: flex;\n  justify-content: space-between;\n}\n.teacher-detail-page .main {\n  flex: 0 0 640px;\n}\n.teacher-detail-page .additional {\n  flex: 0 0 380px;\n}\n.teacher-detail-page .additional .instruments {\n  margin-top: 20px;\n}\n.teacher-detail-page .additional .instruments li {\n  margin: 8px 0;\n}\n.teacher-detail-page .additional .try-it {\n  margin-top: 30px;\n}\n.teacher-detail-page .additional .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.teacher-detail-page .additional .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.teacher-detail-page .additional .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.teacher-detail-page .additional .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(28);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./contacts.styl", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./contacts.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".contacts-page {\n  color: #fff;\n}\n.contacts-page .contacts {\n  margin: 80px auto 40px auto;\n  width: 1110px;\n}\n.contacts-page .contacts ul {\n  margin: 20px 0;\n}\n.contacts-page .contacts ul li {\n  margin: 10px 0;\n}\n.contacts-page .contacts .description {\n  display: inline-block;\n  width: 100px;\n}\n.contacts-page .contacts .value {\n  display: inline-block;\n}\n.contacts-page .contacts .how-to-get {\n  margin-top: 40px;\n  line-height: 1.4;\n  width: 600px;\n}\n.contacts-page .contacts .how-to-get h2 {\n  font-size: 26px;\n  margin-bottom: 12px;\n}\n.contacts-page .map {\n  background: #000 url(\"/map.jpg\") no-repeat center center;\n  height: 578px;\n  margin-bottom: 60px;\n}\n", ""]);
 
 	// exports
 

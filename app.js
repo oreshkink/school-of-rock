@@ -13,6 +13,7 @@ let fs = require('fs');
 // Controllers
 let aboutController = require('./controllers/about');
 let homeController = require('./controllers/home');
+let contactsController = require('./controllers/contacts');
 let teacherController = require('./controllers/teacher');
 let instrumentController = require('./controllers/instrument');
 
@@ -45,6 +46,7 @@ router
         yield aboutController.index.bind(this, router);
     })
     .get('/contacts', function *() {
+        yield contactsController.index.bind(this, router);
     })
     .get('instruments', '/instruments', function* () {
         yield instrumentController.index.bind(this, router);

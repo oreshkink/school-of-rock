@@ -9,6 +9,9 @@ require('./patterns/markdown.styl');
 // Главная страница сайта
 require('./routes/index.styl');
 
+// Контакты
+require('./routes/contacts.styl');
+
 // О школе
 require('./routes/about.styl');
 
