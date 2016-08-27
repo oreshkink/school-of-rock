@@ -7,6 +7,36 @@ html(lang='ru')
         include ../blocks/sitetoolbar
         block body
 
+        div(class="modal back-call-window fade" tabindex="-1" role="dialog")
+            div(class="modal-dialog" role="document")
+                div(class="modal-content")
+                    div(class="modal-header")
+                        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                            span(aria-hidden="true") &times;
+                        h4.modal-title Контактные данные для связи
+                    div(class="modal-body")
+                        form
+                            div
+                                label Телефон
+                                input
+                            div
+                                label E-mail
+                                input(type="email")
+                            button(type="submit" class="btn") Отправить заявку
+
+        div(class="mail-alert alert alert-success fade in hide" role="alert")
+            button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+                span(aria-hidden="true") ×
+            h4 Ваш запрос был успешно отправлен!
+            p В ближайшее время преподаватель свяжется с Вами.
+
+        div(class="mail-alert alert alert-danger fade in hide" role="alert")
+            button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+                span(aria-hidden="true") ×
+            h4 Ошибка отправки сообщения!
+            p Пожалуйста напишите на schoolofrock.moscow@gmail.com или позвоните +7 (495) 162-28-04.
+
+
         script(src='/jquery.js')
 
         script(src='/owl.carousel.js')

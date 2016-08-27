@@ -2,7 +2,7 @@
 
 module.exports = {
     entry: {
-        base: "./scripts/base/base"
+        base: "./scripts/base"
     },
 
     output: {

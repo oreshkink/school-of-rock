@@ -83,7 +83,7 @@ module.exports = {
                     }
                 }
             ]
-        );
+        ).exec();
 
         !teachers.length && this.throw(404);
 
@@ -112,9 +112,7 @@ module.exports = {
             otherInstruments = yield Instrument.model
                 .find(
                 {
-                    slug: {
-                        $nin: instrumentsSlugs
-                    }
+                    slug: { $nin: instrumentsSlugs }
                 }
             );
         }

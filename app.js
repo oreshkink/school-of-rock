@@ -16,6 +16,7 @@ let homeController = require('./controllers/home');
 let contactsController = require('./controllers/contacts');
 let teacherController = require('./controllers/teacher');
 let instrumentController = require('./controllers/instrument');
+let sendEmailController = require('./controllers/send-mail');
 
 let app = koa();
 let router = koa_router();
@@ -59,6 +60,9 @@ router
     })
     .get('teacher', '/teachers/:slug', function* () {
         yield teacherController.show.bind(this, router);
+    })
+    .post('send-mail', '/send-mail', function* () {
+        yield sendEmailController.feedback.bind(this, this.response);
     });
 
 app.use(router.routes());

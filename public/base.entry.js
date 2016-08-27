@@ -58,27 +58,67 @@
 	__webpack_require__(15);
 
 	// Контакты
-	__webpack_require__(27);
-
-	// О школе
 	__webpack_require__(17);
 
-	// Список направлений
+	// О школе
 	__webpack_require__(19);
 
-	// Детальная страница направления
+	// Список направлений
 	__webpack_require__(21);
 
-	// Список преподавателей
+	// Детальная страница направления
 	__webpack_require__(23);
 
 	// Список преподавателей
 	__webpack_require__(25);
 
+	// Список преподавателей
+	__webpack_require__(27);
+
+	__webpack_require__(29);
+	__webpack_require__(31);
+
+	__webpack_require__(32);
+	__webpack_require__(34);
+
 	$(function () {
-	    $('.teachers-list').owlCarousel({
+	    var $teachersList = $('.teachers-list');
+	    var $backCallSuccessAlert = $('.mail-alert.alert-success');
+	    var $backCallDangerAlert = $('.mail-alert.alert-danger');
+
+	    debugger;
+
+	    var $backCallWindow = $('.back-call-window');
+	    var $backCallForm = $backCallWindow.find('form');
+
+	    $teachersList.owlCarousel({
 	        items: 6,
 	        margin: 10
+	    });
+
+	    $backCallForm.submit(function (e) {
+	        e.preventDefault();
+
+	        $.post({
+	            url: '/send-mail',
+	            data: $backCallForm.serialize()
+	        }).done(function (response) {
+	            $backCallWindow.modal('hide');
+	            $backCallSuccessAlert.show();
+	        }).fail(function (response) {
+	            $backCallWindow.modal('hide');
+	            $backCallDangerAlert.show();
+	        });
+	    });
+
+	    $('.free-lesson').click(function (e) {
+	        e.preventDefault();
+	        $backCallWindow.modal('show');
+	    });
+
+	    $('.phone-me').click(function (e) {
+	        e.preventDefault();
+	        $backCallWindow.modal('show');
 	    });
 	});
 
@@ -98,8 +138,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./reset.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./reset.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./reset.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./reset.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -448,8 +488,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./layout.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./layout.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./layout.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./layout.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -488,8 +528,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./buttons.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./buttons.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./buttons.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./buttons.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -528,8 +568,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./toolbar.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./toolbar.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./toolbar.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./toolbar.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -568,8 +608,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./fonts.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./fonts.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./fonts.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./fonts.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -608,8 +648,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./markdown.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./markdown.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./markdown.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./markdown.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -627,7 +667,7 @@
 
 
 	// module
-	exports.push([module.id, ".markdown {\n  margin: 40px 0;\n}\n.markdown h2 {\n  font-size: 32px;\n  font-weight: normal;\n}\n.markdown h3 {\n  font-size: 20px;\n  font-weight: normal;\n}\n.markdown ul {\n  margin: 20px 0;\n}\n.markdown ul li {\n  margin: 5px 0 5px 25px;\n  list-style: disc;\n}\n.markdown ul ul {\n  margin: 10px 0;\n}\n.markdown ul ul li {\n  list-style: circle;\n  margin: 5px 0 5px 20px;\n}\n.markdown blockquote {\n  line-height: 1.4em;\n  width: 500px;\n  padding: 10px 20px;\n  margin: 0 0 20px;\n  font-size: 18px;\n  border-left: 5px solid #eee;\n}\n.markdown hr {\n  margin-top: 10px;\n  margin-bottom: 30px;\n  border: 0;\n  border-top: 2px solid #676767;\n}\n", ""]);
+	exports.push([module.id, ".markdown {\n  margin: 40px 0;\n  line-height: 1.4;\n}\n.markdown p {\n  margin: 10px 0;\n}\n.markdown h2 {\n  font-size: 32px;\n  font-weight: normal;\n}\n.markdown h3 {\n  font-size: 20px;\n  font-weight: normal;\n}\n.markdown ul {\n  margin: 20px 0;\n}\n.markdown ul li {\n  margin: 5px 0 5px 25px;\n  list-style: disc;\n}\n.markdown ul ul {\n  margin: 10px 0;\n}\n.markdown ul ul li {\n  list-style: circle;\n  margin: 5px 0 5px 20px;\n}\n.markdown blockquote {\n  line-height: 1.4em;\n  width: 500px;\n  padding: 10px 20px;\n  margin: 0 0 20px;\n  font-size: 18px;\n  border-left: 5px solid #eee;\n}\n.markdown hr {\n  margin-top: 30px;\n  margin-bottom: 30px;\n  border: 0;\n  border-top: 2px solid #676767;\n}\n", ""]);
 
 	// exports
 
@@ -648,8 +688,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./index.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./index.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./index.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./index.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -688,8 +728,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./about.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./about.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./contacts.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./contacts.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -707,7 +747,7 @@
 
 
 	// module
-	exports.push([module.id, ".about-page {\n  color: #fff;\n  display: flex;\n  justify-content: center;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.about-page .school-description {\n  width: 640px;\n}\n.about-page .school-description .title {\n  font-size: 80px;\n  font-family: 'LatoWebBlack';\n}\n.about-page .school-description .description {\n  margin-top: 10px;\n}\n.about-page .school-description .description .thesis {\n  font-size: 32px;\n}\n.about-page .school-description .description .quote-wrapper {\n  display: flex;\n  justify-content: flex-end;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n.about-page .school-description .description .quote-wrapper .quote {\n  border-left: 3px solid #fff;\n  padding-left: 10px;\n  padding-top: 6px;\n  width: 350px;\n  font-size: 16px;\n  font-style: italic;\n}\n.about-page .school-description .description .quote-wrapper .quote p {\n  margin-bottom: 6px;\n}\n.about-page .school-description .description .detail-description {\n  margin-bottom: 10px;\n  line-height: 22px;\n}\n.about-page .school-description .description .detail-description p {\n  margin-bottom: 10px;\n}\n.about-page .school-description .description .detail-description p .make-louder {\n  font-size: 20px;\n  font-family: 'LatoWebBlack';\n}\n.about-page .school-description .description .detail-description ul li {\n  padding-left: 20px;\n  margin-bottom: 10px;\n}\n.about-page .commercial {\n  width: 300px;\n  margin-left: 80px;\n}\n.about-page .commercial .repetirui {\n  margin-top: 15px;\n}\n.about-page .commercial .repetirui .repetirui-title {\n  display: flex;\n  align-items: flex-end;\n}\n.about-page .commercial .repetirui .repetirui-title .repetirui-icon {\n  background: url(\"/repetirui.png\") no-repeat center center;\n  width: 50px;\n  height: 50px;\n  margin-right: 10px;\n}\n.about-page .commercial .repetirui .repetirui-title a {\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n  text-transform: uppercase;\n  color: #fff;\n}\n.about-page .commercial .repetirui .repetirui-description {\n  margin-top: 20px;\n  line-height: 24px;\n}\n.about-page .commercial .try-it {\n  margin-top: 30px;\n}\n.about-page .commercial .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.about-page .commercial .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.about-page .commercial .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.about-page .commercial .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
+	exports.push([module.id, ".contacts-page {\n  color: #fff;\n}\n.contacts-page .contacts {\n  margin: 80px auto 40px auto;\n  width: 1110px;\n}\n.contacts-page .contacts ul {\n  margin: 20px 0;\n}\n.contacts-page .contacts ul li {\n  margin: 10px 0;\n}\n.contacts-page .contacts .description {\n  display: inline-block;\n  width: 100px;\n}\n.contacts-page .contacts .value {\n  display: inline-block;\n}\n.contacts-page .contacts .how-to-get {\n  margin-top: 40px;\n  line-height: 1.4;\n  width: 600px;\n}\n.contacts-page .contacts .how-to-get h2 {\n  font-size: 26px;\n  margin-bottom: 12px;\n}\n.contacts-page .map {\n  background: #000 url(\"/map.jpg\") no-repeat center center;\n  height: 578px;\n  margin-bottom: 60px;\n}\n", ""]);
 
 	// exports
 
@@ -728,8 +768,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./instruments.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./instruments.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./about.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./about.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -747,7 +787,7 @@
 
 
 	// module
-	exports.push([module.id, ".instruments-list-page {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.instruments-list-page a {\n  color: #fff;\n}\n.instruments-list-page .title {\n  font-family: 'LatoWebBlack';\n  font-size: 80px;\n}\n.instruments-list-page .instruments-list {\n  margin-top: 45px;\n  font-family: 'LatoWebThin';\n}\n.instruments-list-page .instruments-list .instrument {\n  display: flex;\n  padding: 40px;\n  background-color: rgba(16,70,93,0.4);\n}\n.instruments-list-page .instruments-list .instrument .instrument-description {\n  flex: 0 0 610px;\n}\n.instruments-list-page .instruments-list .instrument .instrument-description .instrument-name {\n  font-size: 48px;\n  margin-bottom: 30px;\n}\n.instruments-list-page .instruments-list .instrument .instrument-description .instrument-specification {\n  font-size: 20px;\n  line-height: 25px;\n}\n.instruments-list-page .instruments-list .instrument .teacher {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  margin-left: 50px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo {\n  flex: 0 0 150px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo img {\n  width: 100%;\n  height: 100%;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo img.colored {\n  display: block;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name {\n  margin-left: 20px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name .teacher-title {\n  font-family: 'LatoWeb';\n  font-size: 16px;\n  text-transform: uppercase;\n  margin-bottom: 10px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name .teacher-fullname {\n  font-size: 22px;\n}\n.instruments-list-page .instruments-list .instrument:nth-child(2n) {\n  background: none;\n}\n.instruments-list-page .instruments-list .instrument:hover .teacher .teacher-photo img.colored {\n  display: block;\n}\n", ""]);
+	exports.push([module.id, ".about-page {\n  color: #fff;\n  display: flex;\n  justify-content: center;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.about-page .school-description {\n  width: 640px;\n}\n.about-page .school-description .title {\n  font-size: 80px;\n  font-family: 'LatoWebBlack';\n}\n.about-page .school-description .description {\n  margin-top: 10px;\n}\n.about-page .school-description .description .thesis {\n  font-size: 32px;\n}\n.about-page .school-description .description .quote-wrapper {\n  display: flex;\n  justify-content: flex-end;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n.about-page .school-description .description .quote-wrapper .quote {\n  border-left: 3px solid #fff;\n  padding-left: 10px;\n  padding-top: 6px;\n  width: 350px;\n  font-size: 16px;\n  font-style: italic;\n}\n.about-page .school-description .description .quote-wrapper .quote p {\n  margin-bottom: 6px;\n}\n.about-page .school-description .description .detail-description {\n  margin-bottom: 10px;\n  line-height: 22px;\n}\n.about-page .school-description .description .detail-description p {\n  margin-bottom: 10px;\n}\n.about-page .school-description .description .detail-description p .make-louder {\n  font-size: 20px;\n  font-family: 'LatoWebBlack';\n}\n.about-page .school-description .description .detail-description ul li {\n  padding-left: 20px;\n  margin-bottom: 10px;\n}\n.about-page .commercial {\n  width: 300px;\n  margin-left: 80px;\n}\n.about-page .commercial .repetirui {\n  margin-top: 15px;\n}\n.about-page .commercial .repetirui .repetirui-title {\n  display: flex;\n  align-items: flex-end;\n}\n.about-page .commercial .repetirui .repetirui-title .repetirui-icon {\n  background: url(\"/repetirui.png\") no-repeat center center;\n  width: 50px;\n  height: 50px;\n  margin-right: 10px;\n}\n.about-page .commercial .repetirui .repetirui-title a {\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n  text-transform: uppercase;\n  color: #fff;\n}\n.about-page .commercial .repetirui .repetirui-description {\n  margin-top: 20px;\n  line-height: 24px;\n}\n.about-page .commercial .try-it {\n  margin-top: 30px;\n}\n.about-page .commercial .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.about-page .commercial .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.about-page .commercial .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.about-page .commercial .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
 
 	// exports
 
@@ -768,8 +808,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./instrument.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./instrument.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./instruments.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./instruments.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -787,7 +827,7 @@
 
 
 	// module
-	exports.push([module.id, ".instrument-detail-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n  display: flex;\n  justify-content: space-between;\n}\n.instrument-detail-page .main {\n  flex: 0 0 640px;\n}\n.instrument-detail-page .main .title {\n  font-family: 'LatoWebBlack';\n  font-size: 80px;\n}\n.instrument-detail-page .main .teachers {\n  margin: 15px 0;\n  font-size: 40px;\n  font-family: 'LatoWebThin';\n}\n.instrument-detail-page .additional {\n  flex: 0 0 380px;\n}\n.instrument-detail-page .additional .instruments {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .instruments li {\n  margin: 8px 0;\n}\n.instrument-detail-page .additional .try-it {\n  margin-top: 30px;\n}\n.instrument-detail-page .additional .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.instrument-detail-page .additional .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
+	exports.push([module.id, ".instruments-list-page {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.instruments-list-page a {\n  color: #fff;\n}\n.instruments-list-page .title {\n  font-family: 'LatoWebBlack';\n  font-size: 60px;\n}\n.instruments-list-page .instruments-list {\n  margin-top: 45px;\n  font-family: 'LatoWebThin';\n}\n.instruments-list-page .instruments-list .instrument {\n  display: flex;\n  padding: 40px;\n  background-color: rgba(16,70,93,0.4);\n}\n.instruments-list-page .instruments-list .instrument .instrument-description {\n  flex: 0 0 610px;\n}\n.instruments-list-page .instruments-list .instrument .instrument-description .instrument-name {\n  font-size: 40px;\n  margin-bottom: 15px;\n}\n.instruments-list-page .instruments-list .instrument .instrument-description .instrument-specification {\n  font-size: 20px;\n  line-height: 25px;\n}\n.instruments-list-page .instruments-list .instrument .teacher {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  margin-left: 50px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo {\n  flex: 0 0 150px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo img {\n  width: 100%;\n  height: 100%;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo img.colored {\n  display: block;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name {\n  margin-left: 20px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name .teacher-title {\n  font-family: 'LatoWeb';\n  font-size: 16px;\n  text-transform: uppercase;\n  margin-bottom: 10px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name .teacher-fullname {\n  font-size: 22px;\n}\n.instruments-list-page .instruments-list .instrument:nth-child(2n) {\n  background: none;\n}\n.instruments-list-page .instruments-list .instrument:hover .teacher .teacher-photo img.colored {\n  display: block;\n}\n", ""]);
 
 	// exports
 
@@ -808,8 +848,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./teachers.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./teachers.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./instrument.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./instrument.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -827,7 +867,7 @@
 
 
 	// module
-	exports.push([module.id, ".teachers-list-page {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.teachers-list-page .teachers-list {\n  margin: 50px 0;\n}\n.teachers-list-page .teachers-list .teacher {\n  display: flex;\n  width: 150px;\n  height: 450px;\n}\n.teachers-list-page .teachers-list .teacher .description {\n  flex: 0 0 30px;\n  height: 100%;\n  position: relative;\n}\n.teachers-list-page .teachers-list .teacher .description .name {\n  transform: rotate(90deg);\n  transform-origin: left top 0;\n  width: 400px;\n  position: absolute;\n  left: 23px;\n}\n.teachers-list-page .teachers-list .teacher .description .name .instrument:before {\n  margin: 0 10px;\n  content: '|';\n}\n.teachers-list-page .teachers-list .teacher .photo .bw {\n  display: block;\n}\n.teachers-list-page .teachers-list .teacher .photo .colored {\n  display: none;\n}\n.teachers-list-page .teachers-list .teacher:hover .description {\n  color: #f26a0f;\n  font-weight: bold;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .bw {\n  display: none;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .colored {\n  display: block;\n}\n", ""]);
+	exports.push([module.id, ".instrument-detail-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n  display: flex;\n  justify-content: space-between;\n}\n.instrument-detail-page .main {\n  flex: 0 0 640px;\n}\n.instrument-detail-page .main .title {\n  font-family: 'LatoWebBlack';\n  font-size: 80px;\n}\n.instrument-detail-page .main .teachers {\n  margin: 15px 0;\n  font-size: 40px;\n  font-family: 'LatoWebThin';\n}\n.instrument-detail-page .additional {\n  flex: 0 0 380px;\n}\n.instrument-detail-page .additional .instruments {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .instruments li {\n  margin: 8px 0;\n}\n.instrument-detail-page .additional .try-it {\n  margin-top: 30px;\n}\n.instrument-detail-page .additional .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.instrument-detail-page .additional .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
 
 	// exports
 
@@ -848,8 +888,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./teacher.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./teacher.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./teachers.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./teachers.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -867,7 +907,7 @@
 
 
 	// module
-	exports.push([module.id, ".teacher-detail-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n  display: flex;\n  justify-content: space-between;\n}\n.teacher-detail-page .main {\n  flex: 0 0 640px;\n}\n.teacher-detail-page .additional {\n  flex: 0 0 380px;\n}\n.teacher-detail-page .additional .instruments {\n  margin-top: 20px;\n}\n.teacher-detail-page .additional .instruments li {\n  margin: 8px 0;\n}\n.teacher-detail-page .additional .try-it {\n  margin-top: 30px;\n}\n.teacher-detail-page .additional .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.teacher-detail-page .additional .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.teacher-detail-page .additional .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.teacher-detail-page .additional .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
+	exports.push([module.id, ".teachers-list-page {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.teachers-list-page .teachers-list {\n  margin: 50px 0;\n}\n.teachers-list-page .teachers-list .teacher {\n  display: flex;\n  width: 150px;\n  height: 450px;\n}\n.teachers-list-page .teachers-list .teacher .description {\n  flex: 0 0 30px;\n  height: 100%;\n  position: relative;\n}\n.teachers-list-page .teachers-list .teacher .description .name {\n  transform: rotate(90deg);\n  transform-origin: left top 0;\n  width: 400px;\n  position: absolute;\n  left: 23px;\n}\n.teachers-list-page .teachers-list .teacher .description .name .instrument:before {\n  margin: 0 10px;\n  content: '|';\n}\n.teachers-list-page .teachers-list .teacher .photo .bw {\n  display: block;\n}\n.teachers-list-page .teachers-list .teacher .photo .colored {\n  display: none;\n}\n.teachers-list-page .teachers-list .teacher:hover .description {\n  color: #f26a0f;\n  font-weight: bold;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .bw {\n  display: none;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .colored {\n  display: block;\n}\n", ""]);
 
 	// exports
 
@@ -888,8 +928,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./contacts.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./contacts.styl");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./teacher.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./teacher.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -907,10 +947,495 @@
 
 
 	// module
-	exports.push([module.id, ".contacts-page {\n  color: #fff;\n}\n.contacts-page .contacts {\n  margin: 80px auto 40px auto;\n  width: 1110px;\n}\n.contacts-page .contacts ul {\n  margin: 20px 0;\n}\n.contacts-page .contacts ul li {\n  margin: 10px 0;\n}\n.contacts-page .contacts .description {\n  display: inline-block;\n  width: 100px;\n}\n.contacts-page .contacts .value {\n  display: inline-block;\n}\n.contacts-page .contacts .how-to-get {\n  margin-top: 40px;\n  line-height: 1.4;\n  width: 600px;\n}\n.contacts-page .contacts .how-to-get h2 {\n  font-size: 26px;\n  margin-bottom: 12px;\n}\n.contacts-page .map {\n  background: #000 url(\"/map.jpg\") no-repeat center center;\n  height: 578px;\n  margin-bottom: 60px;\n}\n", ""]);
+	exports.push([module.id, ".teacher-detail-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n  display: flex;\n  justify-content: space-between;\n}\n.teacher-detail-page .main {\n  flex: 0 0 640px;\n}\n.teacher-detail-page .additional {\n  flex: 0 0 380px;\n}\n.teacher-detail-page .additional .instruments {\n  margin-top: 20px;\n}\n.teacher-detail-page .additional .instruments li {\n  margin: 8px 0;\n}\n.teacher-detail-page .additional .try-it {\n  margin-top: 30px;\n}\n.teacher-detail-page .additional .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.teacher-detail-page .additional .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.teacher-detail-page .additional .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.teacher-detail-page .additional .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n", ""]);
 
 	// exports
 
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(30);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./alert.css", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./alert.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".alert {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 250px;\n  padding: 15px;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n\n.alert.hide {\n  display: none;\n}\n\n.alert h4 {\n  margin: 10px 0;\n  color: inherit;\n}\n\n.alert .alert-link {\n  font-weight: bold;\n}\n\n.alert > p, .alert > ul {\n  margin-bottom: 0;\n}\n\n.alert > p + p {\n  margin-top: 5px;\n}\n\n.alert-dismissable,\n.alert-dismissible {\n  padding-right: 35px;\n}\n\n.alert-dismissable .close,\n.alert-dismissible .close {\n  position: relative;\n  top: -2px;\n  right: -21px;\n  color: inherit;\n}\n\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #DFF0D8;\n  color: #3c763d;\n}\n\n.alert-success hr {\n  border-top-color: #DFF0D8;\n}\n\n.alert-success .alert-link {\n  color: #3c763d;\n}\n\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #E0CCCC;\n  color: #a94442;\n}\n\n.alert-danger hr {\n  border-top-color: #E0CCCC;\n}\n\n.alert-danger .alert-link {\n  color: #a94442;\n}\n\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/* ========================================================================
+	 * Bootstrap: alert.js v3.3.7
+	 * http://getbootstrap.com/javascript/#alerts
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+
+	+function ($) {
+	  'use strict';
+
+	  // ALERT CLASS DEFINITION
+	  // ======================
+
+	  var dismiss = '[data-dismiss="alert"]';
+	  var Alert = function Alert(el) {
+	    $(el).on('click', dismiss, this.close);
+	  };
+
+	  Alert.VERSION = '3.3.7';
+
+	  Alert.TRANSITION_DURATION = 150;
+
+	  Alert.prototype.close = function (e) {
+	    var $this = $(this);
+	    var selector = $this.attr('data-target');
+
+	    if (!selector) {
+	      selector = $this.attr('href');
+	      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, ''); // strip for ie7
+	    }
+
+	    var $parent = $(selector === '#' ? [] : selector);
+
+	    if (e) e.preventDefault();
+
+	    if (!$parent.length) {
+	      $parent = $this.closest('.alert');
+	    }
+
+	    $parent.trigger(e = $.Event('close.bs.alert'));
+
+	    if (e.isDefaultPrevented()) return;
+
+	    $parent.removeClass('in');
+
+	    function removeElement() {
+	      // detach from parent, fire event then clean up data
+	      $parent.hide();
+	    }
+
+	    $.support.transition && $parent.hasClass('fade') ? $parent.one('bsTransitionEnd', removeElement).emulateTransitionEnd(Alert.TRANSITION_DURATION) : removeElement();
+	  };
+
+	  // ALERT PLUGIN DEFINITION
+	  // =======================
+
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this = $(this);
+	      var data = $this.data('bs.alert');
+
+	      if (!data) $this.data('bs.alert', data = new Alert(this));
+	      if (typeof option == 'string') data[option].call($this);
+	    });
+	  }
+
+	  var old = $.fn.alert;
+
+	  $.fn.alert = Plugin;
+	  $.fn.alert.Constructor = Alert;
+
+	  // ALERT NO CONFLICT
+	  // =================
+
+	  $.fn.alert.noConflict = function () {
+	    $.fn.alert = old;
+	    return this;
+	  };
+
+	  // ALERT DATA-API
+	  // ==============
+
+	  $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close);
+	}(jQuery);
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(33);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./modal.css", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./modal.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".close {\n  float: right;\n  font-size: 21px;\n  font-weight: bold;\n  line-height: 1;\n  color: #000;\n  text-shadow: 0 1px 0 #fff;\n  filter: alpha(opacity=20);\n  opacity: .2;\n}\n.close:hover,\n.close:focus {\n  color: #000;\n  text-decoration: none;\n  cursor: pointer;\n  filter: alpha(opacity=50);\n  opacity: .5;\n}\nbutton.close {\n  -webkit-appearance: none;\n  padding: 0;\n  cursor: pointer;\n  background: transparent;\n  border: 0;\n}\n.modal-open {\n  overflow: hidden;\n}\n.modal {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1050;\n  display: none;\n  overflow: hidden;\n  -webkit-overflow-scrolling: touch;\n  outline: 0;\n  color: black;\n}\n.modal.fade .modal-dialog {\n  -webkit-transition: -webkit-transform .3s ease-out;\n  -o-transition:      -o-transform .3s ease-out;\n  transition:         transform .3s ease-out;\n  -webkit-transform: translate(0, -25%);\n  -ms-transform: translate(0, -25%);\n  -o-transform: translate(0, -25%);\n  transform: translate(0, -25%);\n}\n.modal.in .modal-dialog {\n  -webkit-transform: translate(0, 0);\n  -ms-transform: translate(0, 0);\n  -o-transform: translate(0, 0);\n  transform: translate(0, 0);\n}\n.modal-open .modal {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.modal-dialog {\n  position: relative;\n  width: auto;\n  margin: 10px;\n}\n.modal-content {\n  position: relative;\n  background-color: #fff;\n  -webkit-background-clip: padding-box;\n  background-clip: padding-box;\n  border: 1px solid #999;\n  border: 1px solid rgba(0, 0, 0, .2);\n  border-radius: 6px;\n  outline: 0;\n  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);\n  box-shadow: 0 3px 9px rgba(0, 0, 0, .5);\n}\n.modal-backdrop {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1040;\n  background-color: #000;\n}\n.modal-backdrop.fade {\n  filter: alpha(opacity=0);\n  opacity: 0;\n}\n.modal-backdrop.in {\n  filter: alpha(opacity=50);\n  opacity: .5;\n}\n.modal-header {\n  padding: 15px;\n  border-bottom: 1px solid #e5e5e5;\n  text-align: center;\n  font-size: 28px;\n  font-weight: normal;\n}\n.modal-header .close {\n  margin-top: -2px;\n}\n.modal-title {\n  margin: 0;\n  line-height: 1.42857143;\n}\n.modal-body {\n  position: relative;\n  padding: 15px;\n}\n.modal-footer {\n  padding: 15px;\n  text-align: right;\n  border-top: 1px solid #e5e5e5;\n}\n.modal-footer .btn + .btn {\n  margin-bottom: 0;\n  margin-left: 5px;\n}\n.modal-footer .btn-group .btn + .btn {\n  margin-left: -1px;\n}\n.modal-footer .btn-block + .btn-block {\n  margin-left: 0;\n}\n.modal-scrollbar-measure {\n  position: absolute;\n  top: -9999px;\n  width: 50px;\n  height: 50px;\n  overflow: scroll;\n}\n@media (min-width: 768px) {\n  .modal-dialog {\n    width: 600px;\n    margin: 30px auto;\n  }\n  .modal-content {\n    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);\n    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);\n  }\n  .modal-sm {\n    width: 300px;\n  }\n}\n@media (min-width: 992px) {\n  .modal-lg {\n    width: 900px;\n  }\n}\n\n.modal form {\n  width: 350px;\n  margin: auto;\n  overflow: hidden;\n}\n\n.modal form div {\n  padding-bottom: 20px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  font-size: 24px;\n}\n\n.modal form input {\n  padding: 3px;\n  width: 200px;\n  height: 24px;\n  border-radius: 2px;\n}\n\n.modal form button {\n  float: right;\n  cursor: pointer;\n  background-color: #f26a0f;\n  width: 100%;\n}", ""]);
+
+	// exports
+
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+	/* ========================================================================
+	 * Bootstrap: modal.js v3.3.7
+	 * http://getbootstrap.com/javascript/#modals
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+
+	+function ($) {
+	  'use strict';
+
+	  // MODAL CLASS DEFINITION
+	  // ======================
+
+	  var Modal = function Modal(element, options) {
+	    this.options = options;
+	    this.$body = $(document.body);
+	    this.$element = $(element);
+	    this.$dialog = this.$element.find('.modal-dialog');
+	    this.$backdrop = null;
+	    this.isShown = null;
+	    this.originalBodyPad = null;
+	    this.scrollbarWidth = 0;
+	    this.ignoreBackdropClick = false;
+
+	    if (this.options.remote) {
+	      this.$element.find('.modal-content').load(this.options.remote, $.proxy(function () {
+	        this.$element.trigger('loaded.bs.modal');
+	      }, this));
+	    }
+	  };
+
+	  Modal.VERSION = '3.3.7';
+
+	  Modal.TRANSITION_DURATION = 300;
+	  Modal.BACKDROP_TRANSITION_DURATION = 150;
+
+	  Modal.DEFAULTS = {
+	    backdrop: true,
+	    keyboard: true,
+	    show: true
+	  };
+
+	  Modal.prototype.toggle = function (_relatedTarget) {
+	    return this.isShown ? this.hide() : this.show(_relatedTarget);
+	  };
+
+	  Modal.prototype.show = function (_relatedTarget) {
+	    var that = this;
+	    var e = $.Event('show.bs.modal', { relatedTarget: _relatedTarget });
+
+	    this.$element.trigger(e);
+
+	    if (this.isShown || e.isDefaultPrevented()) return;
+
+	    this.isShown = true;
+
+	    this.checkScrollbar();
+	    this.setScrollbar();
+	    this.$body.addClass('modal-open');
+
+	    this.escape();
+	    this.resize();
+
+	    this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this));
+
+	    this.$dialog.on('mousedown.dismiss.bs.modal', function () {
+	      that.$element.one('mouseup.dismiss.bs.modal', function (e) {
+	        if ($(e.target).is(that.$element)) that.ignoreBackdropClick = true;
+	      });
+	    });
+
+	    this.backdrop(function () {
+	      var transition = $.support.transition && that.$element.hasClass('fade');
+
+	      if (!that.$element.parent().length) {
+	        that.$element.appendTo(that.$body); // don't move modals dom position
+	      }
+
+	      that.$element.show().scrollTop(0);
+
+	      that.adjustDialog();
+
+	      if (transition) {
+	        that.$element[0].offsetWidth; // force reflow
+	      }
+
+	      that.$element.addClass('in');
+
+	      that.enforceFocus();
+
+	      var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget });
+
+	      transition ? that.$dialog // wait for modal to slide in
+	      .one('bsTransitionEnd', function () {
+	        that.$element.trigger('focus').trigger(e);
+	      }).emulateTransitionEnd(Modal.TRANSITION_DURATION) : that.$element.trigger('focus').trigger(e);
+	    });
+	  };
+
+	  Modal.prototype.hide = function (e) {
+	    if (e) e.preventDefault();
+
+	    e = $.Event('hide.bs.modal');
+
+	    this.$element.trigger(e);
+
+	    if (!this.isShown || e.isDefaultPrevented()) return;
+
+	    this.isShown = false;
+
+	    this.escape();
+	    this.resize();
+
+	    $(document).off('focusin.bs.modal');
+
+	    this.$element.removeClass('in').off('click.dismiss.bs.modal').off('mouseup.dismiss.bs.modal');
+
+	    this.$dialog.off('mousedown.dismiss.bs.modal');
+
+	    $.support.transition && this.$element.hasClass('fade') ? this.$element.one('bsTransitionEnd', $.proxy(this.hideModal, this)).emulateTransitionEnd(Modal.TRANSITION_DURATION) : this.hideModal();
+	  };
+
+	  Modal.prototype.enforceFocus = function () {
+	    $(document).off('focusin.bs.modal') // guard against infinite focus loop
+	    .on('focusin.bs.modal', $.proxy(function (e) {
+	      if (document !== e.target && this.$element[0] !== e.target && !this.$element.has(e.target).length) {
+	        this.$element.trigger('focus');
+	      }
+	    }, this));
+	  };
+
+	  Modal.prototype.escape = function () {
+	    if (this.isShown && this.options.keyboard) {
+	      this.$element.on('keydown.dismiss.bs.modal', $.proxy(function (e) {
+	        e.which == 27 && this.hide();
+	      }, this));
+	    } else if (!this.isShown) {
+	      this.$element.off('keydown.dismiss.bs.modal');
+	    }
+	  };
+
+	  Modal.prototype.resize = function () {
+	    if (this.isShown) {
+	      $(window).on('resize.bs.modal', $.proxy(this.handleUpdate, this));
+	    } else {
+	      $(window).off('resize.bs.modal');
+	    }
+	  };
+
+	  Modal.prototype.hideModal = function () {
+	    var that = this;
+	    this.$element.hide();
+	    this.backdrop(function () {
+	      that.$body.removeClass('modal-open');
+	      that.resetAdjustments();
+	      that.resetScrollbar();
+	      that.$element.trigger('hidden.bs.modal');
+	    });
+	  };
+
+	  Modal.prototype.removeBackdrop = function () {
+	    this.$backdrop && this.$backdrop.remove();
+	    this.$backdrop = null;
+	  };
+
+	  Modal.prototype.backdrop = function (callback) {
+	    var that = this;
+	    var animate = this.$element.hasClass('fade') ? 'fade' : '';
+
+	    if (this.isShown && this.options.backdrop) {
+	      var doAnimate = $.support.transition && animate;
+
+	      this.$backdrop = $(document.createElement('div')).addClass('modal-backdrop ' + animate).appendTo(this.$body);
+
+	      this.$element.on('click.dismiss.bs.modal', $.proxy(function (e) {
+	        if (this.ignoreBackdropClick) {
+	          this.ignoreBackdropClick = false;
+	          return;
+	        }
+	        if (e.target !== e.currentTarget) return;
+	        this.options.backdrop == 'static' ? this.$element[0].focus() : this.hide();
+	      }, this));
+
+	      if (doAnimate) this.$backdrop[0].offsetWidth; // force reflow
+
+	      this.$backdrop.addClass('in');
+
+	      if (!callback) return;
+
+	      doAnimate ? this.$backdrop.one('bsTransitionEnd', callback).emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION) : callback();
+	    } else if (!this.isShown && this.$backdrop) {
+	      this.$backdrop.removeClass('in');
+
+	      var callbackRemove = function callbackRemove() {
+	        that.removeBackdrop();
+	        callback && callback();
+	      };
+	      $.support.transition && this.$element.hasClass('fade') ? this.$backdrop.one('bsTransitionEnd', callbackRemove).emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION) : callbackRemove();
+	    } else if (callback) {
+	      callback();
+	    }
+	  };
+
+	  // these following methods are used to handle overflowing modals
+
+	  Modal.prototype.handleUpdate = function () {
+	    this.adjustDialog();
+	  };
+
+	  Modal.prototype.adjustDialog = function () {
+	    var modalIsOverflowing = this.$element[0].scrollHeight > document.documentElement.clientHeight;
+
+	    this.$element.css({
+	      paddingLeft: !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
+	      paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : ''
+	    });
+	  };
+
+	  Modal.prototype.resetAdjustments = function () {
+	    this.$element.css({
+	      paddingLeft: '',
+	      paddingRight: ''
+	    });
+	  };
+
+	  Modal.prototype.checkScrollbar = function () {
+	    var fullWindowWidth = window.innerWidth;
+	    if (!fullWindowWidth) {
+	      // workaround for missing window.innerWidth in IE8
+	      var documentElementRect = document.documentElement.getBoundingClientRect();
+	      fullWindowWidth = documentElementRect.right - Math.abs(documentElementRect.left);
+	    }
+	    this.bodyIsOverflowing = document.body.clientWidth < fullWindowWidth;
+	    this.scrollbarWidth = this.measureScrollbar();
+	  };
+
+	  Modal.prototype.setScrollbar = function () {
+	    var bodyPad = parseInt(this.$body.css('padding-right') || 0, 10);
+	    this.originalBodyPad = document.body.style.paddingRight || '';
+	    if (this.bodyIsOverflowing) this.$body.css('padding-right', bodyPad + this.scrollbarWidth);
+	  };
+
+	  Modal.prototype.resetScrollbar = function () {
+	    this.$body.css('padding-right', this.originalBodyPad);
+	  };
+
+	  Modal.prototype.measureScrollbar = function () {
+	    // thx walsh
+	    var scrollDiv = document.createElement('div');
+	    scrollDiv.className = 'modal-scrollbar-measure';
+	    this.$body.append(scrollDiv);
+	    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+	    this.$body[0].removeChild(scrollDiv);
+	    return scrollbarWidth;
+	  };
+
+	  // MODAL PLUGIN DEFINITION
+	  // =======================
+
+	  function Plugin(option, _relatedTarget) {
+	    return this.each(function () {
+	      var $this = $(this);
+	      var data = $this.data('bs.modal');
+	      var options = $.extend({}, Modal.DEFAULTS, $this.data(), (typeof option === 'undefined' ? 'undefined' : _typeof(option)) == 'object' && option);
+
+	      if (!data) $this.data('bs.modal', data = new Modal(this, options));
+	      if (typeof option == 'string') data[option](_relatedTarget);else if (options.show) data.show(_relatedTarget);
+	    });
+	  }
+
+	  var old = $.fn.modal;
+
+	  $.fn.modal = Plugin;
+	  $.fn.modal.Constructor = Modal;
+
+	  // MODAL NO CONFLICT
+	  // =================
+
+	  $.fn.modal.noConflict = function () {
+	    $.fn.modal = old;
+	    return this;
+	  };
+
+	  // MODAL DATA-API
+	  // ==============
+
+	  $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
+	    var $this = $(this);
+	    var href = $this.attr('href');
+	    var $target = $($this.attr('data-target') || href && href.replace(/.*(?=#[^\s]+$)/, '')); // strip for ie7
+	    var option = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data());
+
+	    if ($this.is('a')) e.preventDefault();
+
+	    $target.one('show.bs.modal', function (showEvent) {
+	      if (showEvent.isDefaultPrevented()) return; // only register focus restorer if modal will actually get shown
+	      $target.one('hidden.bs.modal', function () {
+	        $this.is(':visible') && $this.trigger('focus');
+	      });
+	    });
+	    Plugin.call($target, option, this);
+	  });
+	}(jQuery);
 
 /***/ }
 /******/ ]);
