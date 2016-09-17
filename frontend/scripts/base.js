@@ -38,8 +38,6 @@ $(function() {
     var $backCallSuccessAlert = $('.mail-alert.alert-success');
     var $backCallDangerAlert = $('.mail-alert.alert-danger');
 
-    debugger;
-
     var $backCallWindow = $('.back-call-window');
     var $backCallForm = $backCallWindow.find('form');
 

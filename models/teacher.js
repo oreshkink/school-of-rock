@@ -17,6 +17,12 @@ let teacherSchema = new mongoose.Schema({
     },
     photo_src: {
         type: String
+    },
+    profile_photo_src: {
+        type: String
+    },
+    profile_photo_src_hover: {
+        type: String
     }
 });
 
