@@ -9,6 +9,7 @@ let koa_router = require('koa-router');
 let serve = require('koa-static');
 let path = require('path');
 let fs = require('fs');
+let bodyParser = require('koa-body-parser');
 
 // Controllers
 let aboutController = require('./controllers/about');
@@ -38,8 +39,13 @@ mongoose.connect('mongodb://localhost/test', {
 
 app.use(serve(__dirname + '/public'));
 
+app.use(bodyParser());
+app.use(router.routes());
 
 router
+    .post('send-mail', '/send-mail', function* () {
+        yield sendEmailController.feedback.bind(this, this.request, this.response);
+    })
     .get('/', function*() {
         yield homeController.index.bind(this, router);
     })
@@ -60,11 +66,6 @@ router
     })
     .get('teacher', '/teachers/:slug', function* () {
         yield teacherController.show.bind(this, router);
-    })
-    .post('send-mail', '/send-mail', function* () {
-        yield sendEmailController.feedback.bind(this, this.response);
     });
-
-app.use(router.routes());
 
 app.listen(3000);

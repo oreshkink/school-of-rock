@@ -50,12 +50,8 @@ $(function() {
         function(e) {
             e.preventDefault();
 
-            $.post(
-                {
-                    url: '/send-mail',
-                    data: $backCallForm.serialize()
-                }
-            ).done(
+            $.post('/send-mail',$backCallForm.serialize())
+            .done(
                 function(response) {
                     $backCallWindow.modal('hide');
                     $backCallSuccessAlert.show();

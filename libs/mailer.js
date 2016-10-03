@@ -29,13 +29,12 @@ class NodeMailer {
         });
     }
 
-    sendMail() {
+    sendMail(params) {
         let data = {
             from: 'schoolofrock.moscow@gmail.com',
             to: 'oreshkin.konstantin@gmail.com',
-            subject: 'Message title',
-            text: 'Plaintext version of the message',
-            html: 'HTML version of the message'
+            subject: 'New request from site',
+            text: `Phone - ${params.phone}, Email - ${params.email}`
         };
 
         return new Promise(

@@ -4,10 +4,10 @@ let nodeMailer = require('../libs/mailer');
 
 
 module.exports = {
-    feedback: function* (response) {
+    feedback: function* (request, response) {
         let self = this;
 
-        yield nodeMailer.sendMail()
+        yield nodeMailer.sendMail(request.body)
                         .then(
             () => {
                 response.status = 200;

@@ -97,10 +97,7 @@
 	    $backCallForm.submit(function (e) {
 	        e.preventDefault();
 
-	        $.post({
-	            url: '/send-mail',
-	            data: $backCallForm.serialize()
-	        }).done(function (response) {
+	        $.post('/send-mail', $backCallForm.serialize()).done(function (response) {
 	            $backCallWindow.modal('hide');
 	            $backCallSuccessAlert.show();
 	        }).fail(function (response) {
