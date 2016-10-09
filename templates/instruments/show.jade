@@ -1,6 +1,9 @@
 extends ../blocks/main
 
-- var infoPath = '../../instruments-info/' + teacher.slug + '.md'
+block head
+    title Школа рока "School Of Rock" | Преподаватель музыки, #{instrument.title}
+    meta(name='description', content='Музыкальная школа "School Of Rock" в Москве.' +
+                                     'Обучение по направлениям: электрогитара, барабаны, рок-вокал, бас гитара, клавишные (синтезатор), акустическая гитара.')
 
 block body
     div.instrument-detail-page
