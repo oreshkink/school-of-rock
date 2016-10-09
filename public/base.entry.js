@@ -75,6 +75,9 @@
 	// Список преподавателей
 	__webpack_require__(27);
 
+	// Цены
+	__webpack_require__(35);
+
 	__webpack_require__(29);
 	__webpack_require__(31);
 
@@ -1431,6 +1434,46 @@
 	    Plugin.call($target, option, this);
 	  });
 	}(jQuery);
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(36);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./price.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./price.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".price {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.price .price-lessons {\n  margin: 40px 0;\n}\n.price .price-lessons ul {\n  font-size: 26px;\n  display: flex;\n  margin: 30px 0 20px 0;\n}\n.price .price-lessons ul li {\n  width: 50%;\n}\n.price .price-lessons ul li .description {\n  color: #fffec9;\n  margin-bottom: 10px;\n}\n.price .price-lessons ul li .value {\n  font-size: 16px;\n}\n.price .price-lessons .price-lessons-description p {\n  padding: 2px 0;\n}\n.price .price-lessons-results {\n  margin: 40px 0;\n  display: flex;\n}\n.price .price-lessons-results ul li {\n  margin: 10px 0;\n}\n.price .price-lessons-results > div {\n  width: 50%;\n}\n.price .price-lessons-results .price-lessons-results-title {\n  font-size: 26px;\n  color: #fffec9;\n  margin-bottom: 10px;\n}\n.price .price-types {\n  margin: 20px 0;\n  display: flex;\n}\n.price .price-types > div {\n  width: 50%;\n}\n.price .price-types .price-types-title {\n  margin-bottom: 10px;\n  color: #fffec9;\n  font-size: 26px;\n}\n.price .price-types ul li {\n  display: flex;\n  margin-bottom: 10px;\n  color: #f26a0f;\n  font-size: 18px;\n}\n.price .price-types ul li .description {\n  margin-right: 20px;\n}\n.price .price-sales-title {\n  margin-bottom: 10px;\n  color: #fffec9;\n  font-size: 26px;\n}\n.price .price-sales {\n  color: #f26a0f;\n  font-size: 18px;\n}\n.price .price-sales td {\n  padding: 10px 10px 10px 0;\n}\n", ""]);
+
+	// exports
+
 
 /***/ }
 /******/ ]);

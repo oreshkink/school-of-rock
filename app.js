@@ -18,6 +18,7 @@ let contactsController = require('./controllers/contacts');
 let teacherController = require('./controllers/teacher');
 let instrumentController = require('./controllers/instrument');
 let sendEmailController = require('./controllers/send-mail');
+let priceController = require('./controllers/prices');
 
 let app = koa();
 let router = koa_router();
@@ -48,6 +49,9 @@ router
     })
     .get('/', function*() {
         yield homeController.index.bind(this, router);
+    })
+    .get('prices', '/prices', function*() {
+        yield priceController.index.bind(this, router);
     })
     .get('about', '/about', function*() {
         yield aboutController.index.bind(this, router);

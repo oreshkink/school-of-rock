@@ -27,6 +27,9 @@ require('./routes/teachers.styl');
 // Список преподавателей
 require('./routes/teacher.styl');
 
+// Цены
+require('./routes/price.styl');
+
 require('./libs/alert.css');
 require('./libs/alert.js');
 
