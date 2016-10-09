@@ -6,7 +6,7 @@ require('clarify');
 let mongoose = require('mongoose');
 let koa = require('koa');
 let koa_router = require('koa-router');
-let serve = require('koa-static');
+let staticCache = require('koa-static-cache');
 let path = require('path');
 let fs = require('fs');
 let bodyParser = require('koa-body-parser');
@@ -38,7 +38,21 @@ mongoose.connect('mongodb://localhost:27017/test', {
     poolSize: 5
 });
 
-app.use(serve(__dirname + '/public'));
+app.use(
+    staticCache(
+        path.join(__dirname, 'public'),
+        {
+            maxAge: 365 * 24 * 60 * 60
+        }
+    )
+
+    //serve(
+    //    __dirname + '/public',
+    //    {
+    //        maxage: 2629000000
+    //    }
+    //)
+);
 
 app.use(bodyParser());
 app.use(router.routes());
