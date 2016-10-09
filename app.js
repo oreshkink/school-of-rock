@@ -28,7 +28,7 @@ middlewares.forEach(function (middleware) {
 });
 
 //mongoose.set('debug', true);
-mongoose.connect('mongodb://localhost/test', {
+mongoose.connect('mongodb://localhost:27017/test', {
     server: {
         socketOptions: {
             keepAlive: 1
