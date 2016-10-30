@@ -46,13 +46,6 @@ app.use(
             maxAge: 365 * 24 * 60 * 60
         }
     )
-
-    //serve(
-    //    __dirname + '/public',
-    //    {
-    //        maxage: 2629000000
-    //    }
-    //)
 );
 
 app.use(bodyParser());
