@@ -76,13 +76,13 @@
 	__webpack_require__(27);
 
 	// Цены
-	__webpack_require__(35);
-
 	__webpack_require__(29);
-	__webpack_require__(31);
 
-	__webpack_require__(32);
+	__webpack_require__(31);
+	__webpack_require__(33);
+
 	__webpack_require__(34);
+	__webpack_require__(36);
 
 	$(function () {
 	    var $teachersList = $('.teachers-list');
@@ -585,7 +585,7 @@
 
 
 	// module
-	exports.push([module.id, ".site-toolbar {\n  display: flex;\n  height: 110px;\n  align-items: center;\n}\n.site-toolbar .logo {\n  flex: 0 0 170px;\n  height: 45px;\n}\n.site-toolbar .logo .logo-img {\n  display: block;\n  margin-left: 40px;\n  width: 95px;\n  height: 100%;\n  background: url(\"/logo.png\") 100% 100% no-repeat;\n}\n.site-toolbar .main-menu-wrapper {\n  width: 100%;\n  font-size: 14pt;\n}\n.site-toolbar .main-menu-wrapper .main-menu {\n  display: flex;\n  min-width: 600px;\n  justify-content: center;\n  padding: 0;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-family: 'LatoWebBlack';\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section {\n  list-style: none;\n  padding: 0 10px;\n  margin: 0;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a {\n  color: #fff;\n  text-decoration: none;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a:hover {\n  color: #fffec9;\n}\n.site-toolbar .contacts {\n  display: flex;\n  align-items: center;\n  flex: 0 0 240px;\n  height: 45px;\n}\n.site-toolbar .contacts .phone {\n  display: block;\n  color: #fff;\n  text-decoration: none;\n}\n.site-toolbar .contacts .map-label {\n  display: block;\n  background: url(\"/map-label.png\") no-repeat 12px 10px;\n  background-color: #fff;\n  height: 40px;\n  width: 40px;\n  border-radius: 50%;\n  opacity: 0.15;\n  margin-left: 20px;\n}\n.site-toolbar .contacts .map-label:hover {\n  opacity: 1;\n}\n", ""]);
+	exports.push([module.id, ".site-toolbar {\n  display: flex;\n  height: 110px;\n  align-items: center;\n}\n.site-toolbar .logo {\n  flex: 0 0 170px;\n  height: 45px;\n}\n.site-toolbar .logo .logo-img {\n  display: block;\n  margin-left: 40px;\n  width: 95px;\n  height: 100%;\n  background: url(\"/logo.png\") 100% 100% no-repeat;\n}\n.site-toolbar .main-menu-wrapper {\n  width: 100%;\n  font-size: 14pt;\n}\n.site-toolbar .main-menu-wrapper .main-menu {\n  display: flex;\n  min-width: 600px;\n  justify-content: center;\n  padding: 0;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-family: 'LatoWebBlack';\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section {\n  list-style: none;\n  padding: 0 10px;\n  margin: 0;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a {\n  color: #fff;\n  text-decoration: none;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a:hover {\n  color: #fffec9;\n}\n.site-toolbar .contacts {\n  display: flex;\n  align-items: center;\n  flex: 0 0 240px;\n  height: 45px;\n}\n.site-toolbar .contacts .address {\n  color: #fff;\n}\n.site-toolbar .contacts .address .city {\n  margin-bottom: 10px;\n  text-align: center;\n  font-size: 24px;\n}\n.site-toolbar .contacts .address .phone {\n  display: block;\n  text-decoration: none;\n}\n.site-toolbar .contacts .map-label {\n  display: block;\n  background: url(\"/map-label.png\") no-repeat 12px 10px;\n  background-color: #fff;\n  height: 40px;\n  width: 40px;\n  border-radius: 50%;\n  opacity: 0.15;\n  margin-left: 20px;\n}\n.site-toolbar .contacts .map-label:hover {\n  opacity: 1;\n}\n", ""]);
 
 	// exports
 
@@ -966,8 +966,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./alert.css", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./alert.css");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./price.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./price.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -985,13 +985,53 @@
 
 
 	// module
-	exports.push([module.id, ".alert {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 250px;\n  padding: 15px;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n\n.alert.hide {\n  display: none;\n}\n\n.alert h4 {\n  margin: 10px 0;\n  color: inherit;\n}\n\n.alert .alert-link {\n  font-weight: bold;\n}\n\n.alert > p, .alert > ul {\n  margin-bottom: 0;\n}\n\n.alert > p + p {\n  margin-top: 5px;\n}\n\n.alert-dismissable,\n.alert-dismissible {\n  padding-right: 35px;\n}\n\n.alert-dismissable .close,\n.alert-dismissible .close {\n  position: relative;\n  top: -2px;\n  right: -21px;\n  color: inherit;\n}\n\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #DFF0D8;\n  color: #3c763d;\n}\n\n.alert-success hr {\n  border-top-color: #DFF0D8;\n}\n\n.alert-success .alert-link {\n  color: #3c763d;\n}\n\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #E0CCCC;\n  color: #a94442;\n}\n\n.alert-danger hr {\n  border-top-color: #E0CCCC;\n}\n\n.alert-danger .alert-link {\n  color: #a94442;\n}\n\n", ""]);
+	exports.push([module.id, ".price {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.price .price-lessons {\n  margin: 40px 0;\n}\n.price .price-lessons ul {\n  font-size: 26px;\n  display: flex;\n  margin: 30px 0 20px 0;\n}\n.price .price-lessons ul li {\n  width: 50%;\n}\n.price .price-lessons ul li .description {\n  color: #fffec9;\n  margin-bottom: 10px;\n}\n.price .price-lessons ul li .value {\n  font-size: 16px;\n}\n.price .price-lessons .price-lessons-description p {\n  padding: 2px 0;\n}\n.price .price-lessons-results {\n  margin: 40px 0;\n  display: flex;\n}\n.price .price-lessons-results ul li {\n  margin: 10px 0;\n}\n.price .price-lessons-results > div {\n  width: 50%;\n}\n.price .price-lessons-results .price-lessons-results-title {\n  font-size: 26px;\n  color: #fffec9;\n  margin-bottom: 10px;\n}\n.price .price-types {\n  margin: 20px 0;\n  display: flex;\n}\n.price .price-types > div {\n  width: 50%;\n}\n.price .price-types .price-types-title {\n  margin-bottom: 10px;\n  color: #fffec9;\n  font-size: 26px;\n}\n.price .price-types ul li {\n  display: flex;\n  margin-bottom: 10px;\n  color: #f26a0f;\n  font-size: 18px;\n}\n.price .price-types ul li .description {\n  margin-right: 20px;\n}\n.price .price-sales-title {\n  margin-bottom: 10px;\n  color: #fffec9;\n  font-size: 26px;\n}\n.price .price-sales {\n  color: #f26a0f;\n  font-size: 18px;\n}\n.price .price-sales td {\n  padding: 10px 10px 10px 0;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(32);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./alert.css", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./alert.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".alert {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 250px;\n  padding: 15px;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n\n.alert.hide {\n  display: none;\n}\n\n.alert h4 {\n  margin: 10px 0;\n  color: inherit;\n}\n\n.alert .alert-link {\n  font-weight: bold;\n}\n\n.alert > p, .alert > ul {\n  margin-bottom: 0;\n}\n\n.alert > p + p {\n  margin-top: 5px;\n}\n\n.alert-dismissable,\n.alert-dismissible {\n  padding-right: 35px;\n}\n\n.alert-dismissable .close,\n.alert-dismissible .close {\n  position: relative;\n  top: -2px;\n  right: -21px;\n  color: inherit;\n}\n\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #DFF0D8;\n  color: #3c763d;\n}\n\n.alert-success hr {\n  border-top-color: #DFF0D8;\n}\n\n.alert-success .alert-link {\n  color: #3c763d;\n}\n\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #E0CCCC;\n  color: #a94442;\n}\n\n.alert-danger hr {\n  border-top-color: #E0CCCC;\n}\n\n.alert-danger .alert-link {\n  color: #a94442;\n}\n\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 33 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1083,13 +1123,13 @@
 	}(jQuery);
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(33);
+	var content = __webpack_require__(35);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -1109,7 +1149,7 @@
 	}
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -1123,7 +1163,7 @@
 
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1434,46 +1474,6 @@
 	    Plugin.call($target, option, this);
 	  });
 	}(jQuery);
-
-/***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(36);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./price.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./price.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".price {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.price .price-lessons {\n  margin: 40px 0;\n}\n.price .price-lessons ul {\n  font-size: 26px;\n  display: flex;\n  margin: 30px 0 20px 0;\n}\n.price .price-lessons ul li {\n  width: 50%;\n}\n.price .price-lessons ul li .description {\n  color: #fffec9;\n  margin-bottom: 10px;\n}\n.price .price-lessons ul li .value {\n  font-size: 16px;\n}\n.price .price-lessons .price-lessons-description p {\n  padding: 2px 0;\n}\n.price .price-lessons-results {\n  margin: 40px 0;\n  display: flex;\n}\n.price .price-lessons-results ul li {\n  margin: 10px 0;\n}\n.price .price-lessons-results > div {\n  width: 50%;\n}\n.price .price-lessons-results .price-lessons-results-title {\n  font-size: 26px;\n  color: #fffec9;\n  margin-bottom: 10px;\n}\n.price .price-types {\n  margin: 20px 0;\n  display: flex;\n}\n.price .price-types > div {\n  width: 50%;\n}\n.price .price-types .price-types-title {\n  margin-bottom: 10px;\n  color: #fffec9;\n  font-size: 26px;\n}\n.price .price-types ul li {\n  display: flex;\n  margin-bottom: 10px;\n  color: #f26a0f;\n  font-size: 18px;\n}\n.price .price-types ul li .description {\n  margin-right: 20px;\n}\n.price .price-sales-title {\n  margin-bottom: 10px;\n  color: #fffec9;\n  font-size: 26px;\n}\n.price .price-sales {\n  color: #f26a0f;\n  font-size: 18px;\n}\n.price .price-sales td {\n  padding: 10px 10px 10px 0;\n}\n", ""]);
-
-	// exports
-
 
 /***/ }
 /******/ ]);
