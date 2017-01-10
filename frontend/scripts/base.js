@@ -30,6 +30,10 @@ require('./routes/teacher.styl');
 // Цены
 require('./routes/price.styl');
 
+// Цены
+require('./routes/videos.styl');
+
+
 require('./libs/alert.css');
 require('./libs/alert.js');
 

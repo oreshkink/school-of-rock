@@ -20,6 +20,7 @@ let instrumentController = require('./controllers/instrument');
 let sendEmailController = require('./controllers/send-mail');
 let priceController = require('./controllers/prices');
 let saleController = require('./controllers/sales');
+let videoController = require('./controllers/videos');
 
 let app = koa();
 let router = koa_router();
@@ -81,6 +82,9 @@ router
     })
     .get('teacher', '/teachers/:slug', function* () {
         yield teacherController.show.bind(this, router);
+    })
+    .get('videos', '/videos', function* () {
+        yield videoController.index.bind(this, router);
     });
 
 app.listen(3000);

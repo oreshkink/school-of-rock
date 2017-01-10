@@ -78,11 +78,14 @@
 	// Цены
 	__webpack_require__(29);
 
+	// Цены
 	__webpack_require__(31);
-	__webpack_require__(33);
 
-	__webpack_require__(34);
+	__webpack_require__(33);
+	__webpack_require__(35);
+
 	__webpack_require__(36);
+	__webpack_require__(38);
 
 	$(function () {
 	    var $teachersList = $('.teachers-list');
@@ -585,7 +588,7 @@
 
 
 	// module
-	exports.push([module.id, ".site-toolbar {\n  display: flex;\n  height: 110px;\n  align-items: center;\n}\n.site-toolbar .logo {\n  flex: 0 0 170px;\n  height: 45px;\n}\n.site-toolbar .logo .logo-img {\n  display: block;\n  margin-left: 40px;\n  width: 95px;\n  height: 100%;\n  background: url(\"/logo.png\") 100% 100% no-repeat;\n}\n.site-toolbar .main-menu-wrapper {\n  width: 100%;\n  font-size: 14pt;\n}\n.site-toolbar .main-menu-wrapper .main-menu {\n  display: flex;\n  min-width: 600px;\n  justify-content: center;\n  padding: 0;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-family: 'LatoWebBlack';\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section {\n  list-style: none;\n  padding: 0 10px;\n  margin: 0;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a {\n  color: #fff;\n  text-decoration: none;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a:hover {\n  color: #fffec9;\n}\n.site-toolbar .contacts {\n  display: flex;\n  align-items: center;\n  flex: 0 0 240px;\n  height: 45px;\n}\n.site-toolbar .contacts .address {\n  color: #fff;\n}\n.site-toolbar .contacts .address .city {\n  margin-bottom: 10px;\n  text-align: center;\n  font-size: 24px;\n}\n.site-toolbar .contacts .address .phone {\n  display: block;\n  text-decoration: none;\n}\n.site-toolbar .contacts .map-label {\n  display: block;\n  background: url(\"/map-label.png\") no-repeat 12px 10px;\n  background-color: #fff;\n  height: 40px;\n  width: 40px;\n  border-radius: 50%;\n  opacity: 0.15;\n  margin-left: 20px;\n}\n.site-toolbar .contacts .map-label:hover {\n  opacity: 1;\n}\n", ""]);
+	exports.push([module.id, ".site-toolbar {\n  display: flex;\n  height: 110px;\n  align-items: center;\n}\n.site-toolbar .logo {\n  flex: 0 0 170px;\n  height: 45px;\n}\n.site-toolbar .logo .logo-img {\n  display: block;\n  margin-left: 40px;\n  width: 95px;\n  height: 100%;\n  background: url(\"/logo.png\") 100% 100% no-repeat;\n}\n.site-toolbar .main-menu-wrapper {\n  width: 100%;\n  font-size: 14pt;\n}\n.site-toolbar .main-menu-wrapper .main-menu {\n  display: flex;\n  min-width: 720px;\n  justify-content: center;\n  padding: 0;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-family: 'LatoWebBlack';\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section {\n  list-style: none;\n  padding: 0 10px;\n  margin: 0;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a {\n  color: #fff;\n  text-decoration: none;\n}\n.site-toolbar .main-menu-wrapper .main-menu .main-menu-section a:hover {\n  color: #fffec9;\n}\n.site-toolbar .contacts {\n  display: flex;\n  align-items: center;\n  flex: 0 0 240px;\n  height: 45px;\n}\n.site-toolbar .contacts .address {\n  color: #fff;\n}\n.site-toolbar .contacts .address .city {\n  margin-bottom: 10px;\n  text-align: center;\n  font-size: 24px;\n}\n.site-toolbar .contacts .address .phone {\n  display: block;\n  text-decoration: none;\n}\n.site-toolbar .contacts .map-label {\n  display: block;\n  background: url(\"/map-label.png\") no-repeat 12px 10px;\n  background-color: #fff;\n  height: 40px;\n  width: 40px;\n  border-radius: 50%;\n  opacity: 0.15;\n  margin-left: 20px;\n}\n.site-toolbar .contacts .map-label:hover {\n  opacity: 1;\n}\n", ""]);
 
 	// exports
 
@@ -705,7 +708,7 @@
 
 
 	// module
-	exports.push([module.id, ".main-info {\n  display: flex;\n  width: 1100px;\n  margin: 180px auto 100px auto;\n  color: #fff;\n}\n.main-info .main-brand-info {\n  flex: 0 0 600px;\n}\n.main-info .main-brand-info .name-en {\n  font-family: 'LatoWebBlack';\n  font-size: 85px;\n}\n.main-info .main-brand-info .name-ru {\n  font-family: 'LatoWebThin';\n  margin-top: -10px;\n  font-size: 72px;\n  font-weight: 100;\n}\n.main-info .main-brand-info .description {\n  font-family: 'LatoWebThin';\n  margin-top: 20px;\n  font-size: 20px;\n  line-height: 24px;\n}\n.main-info .main-brand-info .read-more {\n  margin-top: 25px;\n}\n.main-info .main-brand-info .read-more a {\n  font-size: 19px;\n  color: #a89891;\n}\n.main-info .main-brand-info .promo-toolbar {\n  margin-top: 35px;\n}\n.main-info .main-brand-info .promo-toolbar .btn {\n  margin-right: 20px;\n}\n.main-info .commercial {\n  flex: 0 0 550px;\n  padding-left: 180px;\n  margin-top: 42px;\n  box-sizing: border-box;\n}\n.main-info .commercial .logo {\n  font-size: 32px;\n}\n.main-info .commercial .logo a {\n  color: #fff;\n  text-transform: uppercase;\n  text-decoration: none;\n}\n.main-info .commercial .logo a:hover {\n  color: #fffec9;\n}\n.main-info .commercial .description {\n  font-size: 18px;\n  margin-top: 15px;\n}\n", ""]);
+	exports.push([module.id, ".main-info {\n  display: flex;\n  width: 1100px;\n  margin: 100px auto 100px auto;\n  color: #fff;\n}\n.main-info .main-brand-info {\n  flex: 0 0 600px;\n}\n.main-info .main-brand-info .name-en {\n  font-family: 'LatoWebBlack';\n  font-size: 85px;\n}\n.main-info .main-brand-info .name-ru {\n  font-family: 'LatoWebThin';\n  margin-top: -10px;\n  font-size: 72px;\n  font-weight: 100;\n}\n.main-info .main-brand-info .description {\n  font-family: 'LatoWebThin';\n  margin-top: 20px;\n  font-size: 20px;\n  line-height: 22px;\n}\n.main-info .main-brand-info .read-more {\n  margin-top: 25px;\n}\n.main-info .main-brand-info .read-more a {\n  font-size: 19px;\n  color: #a89891;\n}\n.main-info .main-brand-info .promo-toolbar {\n  margin-top: 35px;\n}\n.main-info .main-brand-info .promo-toolbar .btn {\n  margin-right: 20px;\n}\n.main-info .commercial {\n  flex: 0 0 550px;\n  padding-left: 180px;\n  margin-top: 42px;\n  box-sizing: border-box;\n}\n.main-info .commercial .logo {\n  font-size: 32px;\n}\n.main-info .commercial .logo a {\n  color: #fff;\n  text-transform: uppercase;\n  text-decoration: none;\n}\n.main-info .commercial .logo a:hover {\n  color: #fffec9;\n}\n.main-info .commercial .description {\n  font-size: 18px;\n  margin-top: 15px;\n}\n", ""]);
 
 	// exports
 
@@ -1006,8 +1009,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./alert.css", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./alert.css");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./videos.styl", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./videos.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -1025,13 +1028,53 @@
 
 
 	// module
-	exports.push([module.id, ".alert {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 250px;\n  padding: 15px;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n\n.alert.hide {\n  display: none;\n}\n\n.alert h4 {\n  margin: 10px 0;\n  color: inherit;\n}\n\n.alert .alert-link {\n  font-weight: bold;\n}\n\n.alert > p, .alert > ul {\n  margin-bottom: 0;\n}\n\n.alert > p + p {\n  margin-top: 5px;\n}\n\n.alert-dismissable,\n.alert-dismissible {\n  padding-right: 35px;\n}\n\n.alert-dismissable .close,\n.alert-dismissible .close {\n  position: relative;\n  top: -2px;\n  right: -21px;\n  color: inherit;\n}\n\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #DFF0D8;\n  color: #3c763d;\n}\n\n.alert-success hr {\n  border-top-color: #DFF0D8;\n}\n\n.alert-success .alert-link {\n  color: #3c763d;\n}\n\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #E0CCCC;\n  color: #a94442;\n}\n\n.alert-danger hr {\n  border-top-color: #E0CCCC;\n}\n\n.alert-danger .alert-link {\n  color: #a94442;\n}\n\n", ""]);
+	exports.push([module.id, ".videos-page {\n  color: #fff;\n  margin: 80px auto 40px auto;\n  width: 1110px;\n}\n.videos-page h1 {\n  margin-bottom: 40px;\n}\n.videos-page h2 {\n  font-size: 26px;\n  margin: 12px 0;\n}\n.videos-page .videos-list {\n  display: flex;\n  justify-content: space-between;\n  flex-flow: wrap;\n}\n.videos-page .videos-list .video-item {\n  flex: 0 0 530px;\n  font-size: 18px;\n  margin-bottom: 30px;\n}\n.videos-page .videos-list .video-item .video-title {\n  margin-bottom: 10px;\n  height: 45px;\n  display: flex;\n  align-items: center;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(34);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./alert.css", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./alert.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".alert {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 250px;\n  padding: 15px;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n\n.alert.hide {\n  display: none;\n}\n\n.alert h4 {\n  margin: 10px 0;\n  color: inherit;\n}\n\n.alert .alert-link {\n  font-weight: bold;\n}\n\n.alert > p, .alert > ul {\n  margin-bottom: 0;\n}\n\n.alert > p + p {\n  margin-top: 5px;\n}\n\n.alert-dismissable,\n.alert-dismissible {\n  padding-right: 35px;\n}\n\n.alert-dismissable .close,\n.alert-dismissible .close {\n  position: relative;\n  top: -2px;\n  right: -21px;\n  color: inherit;\n}\n\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #DFF0D8;\n  color: #3c763d;\n}\n\n.alert-success hr {\n  border-top-color: #DFF0D8;\n}\n\n.alert-success .alert-link {\n  color: #3c763d;\n}\n\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #E0CCCC;\n  color: #a94442;\n}\n\n.alert-danger hr {\n  border-top-color: #E0CCCC;\n}\n\n.alert-danger .alert-link {\n  color: #a94442;\n}\n\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 35 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1123,13 +1166,13 @@
 	}(jQuery);
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(35);
+	var content = __webpack_require__(37);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -1149,7 +1192,7 @@
 	}
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -1163,7 +1206,7 @@
 
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports) {
 
 	'use strict';
