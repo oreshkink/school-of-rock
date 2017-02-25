@@ -71,10 +71,10 @@ router
     .get('/contacts', function *() {
         yield contactsController.index.bind(this, router);
     })
-    .get('instruments', '/instruments', function* () {
+    .get('instruments', '/uroki', function* () {
         yield instrumentController.index.bind(this, router);
     })
-    .get('instrument', '/instruments/:slug', function* () {
+    .get('instrument', '/uroki/:slug', function* () {
         yield instrumentController.show.bind(this, router);
     })
     .get('teachers', '/teachers', function* () {
