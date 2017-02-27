@@ -44,7 +44,7 @@ app.use(
     staticCache(
         path.join(__dirname, 'public'),
         {
-            maxAge: 365 * 24 * 60 * 60
+            maxAge: 24 * 60 * 60
         }
     )
 );

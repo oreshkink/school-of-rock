@@ -1028,7 +1028,7 @@
 
 
 	// module
-	exports.push([module.id, ".videos-page {\n  color: #fff;\n  margin: 80px auto 40px auto;\n  width: 1110px;\n}\n.videos-page h1 {\n  margin-bottom: 40px;\n}\n.videos-page h2 {\n  font-size: 26px;\n  margin: 12px 0;\n}\n.videos-page .videos-list {\n  display: flex;\n  justify-content: space-between;\n  flex-flow: wrap;\n}\n.videos-page .videos-list .video-item {\n  flex: 0 0 530px;\n  font-size: 18px;\n  margin-bottom: 30px;\n}\n.videos-page .videos-list .video-item .video-title {\n  margin-bottom: 10px;\n  height: 45px;\n  display: flex;\n  align-items: center;\n}\n", ""]);
+	exports.push([module.id, ".videos-page {\n  color: #fff;\n  margin: 80px auto 40px auto;\n  width: 1110px;\n}\n.videos-page h1 {\n  margin-bottom: 40px;\n}\n.videos-page h1 a {\n  font-size: 18px;\n  margin-left: 20px;\n  color: #fffec9;\n}\n.videos-page h2 {\n  font-size: 26px;\n  margin: 12px 0;\n}\n.videos-page .videos-list {\n  display: flex;\n  justify-content: space-between;\n  flex-flow: wrap;\n}\n.videos-page .videos-list .video-item {\n  flex: 0 0 530px;\n  font-size: 18px;\n  margin-bottom: 30px;\n}\n.videos-page .videos-list .video-item .video-title {\n  margin-bottom: 10px;\n  height: 45px;\n  display: flex;\n  align-items: center;\n}\n", ""]);
 
 	// exports
 
