@@ -10,7 +10,8 @@ block body
         div.main
             if teacherInstruments.length
                 each teacherInstrument in teacherInstruments
-                    h1= teacherInstrument.title
+                    h1
+                        a(href=router.url('instrument', teacherInstrument.slug))= teacherInstrument.title
 
             div.markdown
                 div.specification !{teacher.description}
