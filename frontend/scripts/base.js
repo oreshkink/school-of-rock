@@ -30,7 +30,7 @@ require('./routes/teacher.styl');
 // Цены
 require('./routes/price.styl');
 
-// Цены
+// Видео
 require('./routes/videos.styl');
 
 

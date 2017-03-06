@@ -78,7 +78,7 @@
 	// Цены
 	__webpack_require__(29);
 
-	// Цены
+	// Видео
 	__webpack_require__(31);
 
 	__webpack_require__(33);
@@ -988,7 +988,7 @@
 
 
 	// module
-	exports.push([module.id, ".price {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.price .price-lessons {\n  margin: 40px 0;\n}\n.price .price-lessons ul {\n  font-size: 26px;\n  display: flex;\n  margin: 30px 0 20px 0;\n}\n.price .price-lessons ul li {\n  width: 50%;\n}\n.price .price-lessons ul li .description {\n  color: #fffec9;\n  margin-bottom: 10px;\n}\n.price .price-lessons ul li .value {\n  font-size: 16px;\n}\n.price .price-lessons .price-lessons-description p {\n  padding: 2px 0;\n}\n.price .price-lessons-results {\n  margin: 40px 0;\n  display: flex;\n}\n.price .price-lessons-results ul li {\n  margin: 10px 0;\n}\n.price .price-lessons-results > div {\n  width: 50%;\n}\n.price .price-lessons-results .price-lessons-results-title {\n  font-size: 26px;\n  color: #fffec9;\n  margin-bottom: 10px;\n}\n.price .price-types {\n  margin: 20px 0;\n  display: flex;\n}\n.price .price-types > div {\n  width: 50%;\n}\n.price .price-types .price-types-title {\n  margin-bottom: 10px;\n  color: #fffec9;\n  font-size: 26px;\n}\n.price .price-types ul li {\n  display: flex;\n  margin-bottom: 10px;\n  color: #f26a0f;\n  font-size: 18px;\n}\n.price .price-types ul li .description {\n  margin-right: 20px;\n}\n.price .price-sales-title {\n  margin-bottom: 10px;\n  color: #fffec9;\n  font-size: 26px;\n}\n.price .price-sales {\n  color: #f26a0f;\n  font-size: 18px;\n}\n.price .price-sales td {\n  padding: 10px 10px 10px 0;\n}\n", ""]);
+	exports.push([module.id, ".price {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.price .price-default-types {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 50px;\n}\n.price .price-default-types .price-default-type {\n  flex: 0 0 340px;\n  background-color: #fff;\n  color: #000;\n  border-radius: 5px;\n  overflow: hidden;\n}\n.price .price-default-types .price-default-type .pdf-title {\n  font-size: 24px;\n  margin-bottom: 10px;\n  color: #fff;\n  background-color: #dc6a1e;\n  text-align: center;\n  padding: 20px 0;\n}\n.price .price-default-types .price-default-type .pdf-title .pdf-title-price {\n  margin-top: 10px;\n  font-size: 18px;\n}\n.price .price-default-types .price-default-type .pdf-description {\n  padding: 10px 20px;\n  text-align: center;\n}\n.price .price-default-types .price-default-type .pdf-description li {\n  margin-bottom: 5px;\n  font-size: 16px;\n}\n.price .price-default-info {\n  width: 900px;\n  margin-top: 30px;\n  line-height: 30px;\n  font-size: 20px;\n}\n.price .price-lessons-results {\n  margin: 40px 0;\n  display: flex;\n}\n.price .price-lessons-results ul li {\n  margin: 10px 0;\n}\n.price .price-lessons-results > div {\n  width: 50%;\n}\n.price .price-lessons-results .price-lessons-results-title {\n  font-size: 26px;\n  color: #fffec9;\n  margin-bottom: 10px;\n}\n", ""]);
 
 	// exports
 
