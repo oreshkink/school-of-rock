@@ -33,3 +33,11 @@ block body
                 div.try-it-buttons
                     a(class='btn free-lesson' href='#') Бесплатный урок
                     a(class='btn phone-me' href='#') Позвоните мне!
+
+            if instrument.videoReviews && instrument.videoReviews.length
+                div.reviews
+                    div.reviews-title
+                        Отзывы
+                div.review
+                    each review in instrument.videoReviews
+                        iframe(width="380" height="315" src=review frameborder="0" allowfullscreen)

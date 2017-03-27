@@ -22,7 +22,8 @@ let instrumentSchema = new mongoose.Schema({
     slug: {
         type: String,
         required: 'Slug обязателен'
-    }
+    },
+    videoReviews: [String]
 });
 
 module.exports.schema = instrumentSchema;
