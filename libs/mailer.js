@@ -32,7 +32,7 @@ class NodeMailer {
     sendMail(params) {
         let data = {
             from: 'schoolofrock.moscow@gmail.com',
-            to: 'oreshkin.konstantin@gmail.com',
+            to: 'schoolofrock@yandex.ru',
             subject: 'New request from site',
             text: `Phone - ${params.phone}, Email - ${params.email}`
         };

@@ -29,3 +29,8 @@ block body
                 div.try-it-buttons
                     a(class='btn free-lesson' href='#') Бесплатный урок
                     a(class='btn phone-me' href='#') Позвоните мне!
+
+            if teacher.videoReviews && teacher.videoReviews.length
+                div.review
+                    each review in teacher.videoReviews
+                        iframe(width="380" height="315" src=review frameborder="0" allowfullscreen)
