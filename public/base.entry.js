@@ -81,6 +81,10 @@
 	// Видео
 	__webpack_require__(31);
 
+	// Статьи
+	__webpack_require__(41);
+	__webpack_require__(39);
+
 	__webpack_require__(33);
 	__webpack_require__(35);
 
@@ -1515,6 +1519,86 @@
 	    Plugin.call($target, option, this);
 	  });
 	}(jQuery);
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(40);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./articles.styl", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./articles.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".articles-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.articles-page .ap--title {\n  margin-bottom: 50px;\n}\n.articles-page .ap--list .article {\n  margin-bottom: 30px;\n}\n.articles-page .ap--list .article .article--title {\n  font-size: 26px;\n  margin-bottom: 20px;\n}\n.articles-page .ap--list .article .article--description {\n  font-size: 18px;\n  line-height: 1.5em;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(42);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./article.styl", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./article.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".article-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.article-page .ap--title {\n  margin-bottom: 40px;\n}\n.article-page .ap--description {\n  font-size: 18px;\n  line-height: 1.5em;\n}\n", ""]);
+
+	// exports
+
 
 /***/ }
 /******/ ]);

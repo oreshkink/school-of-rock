@@ -21,6 +21,7 @@ let sendEmailController = require('./controllers/send-mail');
 let priceController = require('./controllers/prices');
 let saleController = require('./controllers/sales');
 let videoController = require('./controllers/videos');
+let articlesController = require('./controllers/articles');
 
 let app = koa();
 let router = koa_router();
@@ -85,6 +86,12 @@ router
     })
     .get('videos', '/videos', function* () {
         yield videoController.index.bind(this, router);
+    })
+    .get('articles', '/poleznoe', function* () {
+        yield articlesController.index.bind(this, router); 
+    })
+    .get('article', '/poleznoe/:slug', function* () {
+        yield articlesController.show.bind(this, router);
     });
 
 app.listen(3000);

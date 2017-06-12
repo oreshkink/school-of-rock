@@ -33,6 +33,10 @@ require('./routes/price.styl');
 // Видео
 require('./routes/videos.styl');
 
+// Статьи
+require('./routes/article.styl');
+require('./routes/articles.styl');
+
 
 require('./libs/alert.css');
 require('./libs/alert.js');
