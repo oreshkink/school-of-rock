@@ -52,10 +52,10 @@ $(function() {
     var $backCallWindow = $('.back-call-window');
     var $backCallForm = $backCallWindow.find('form');
 
-    $teachersList.owlCarousel({
-        items: 6,
-        margin: 10
-    });
+    // $teachersList.owlCarousel({
+    //     items: 6,
+    //     margin: 10
+    // });
 
     $backCallForm.submit(
         function(e) {

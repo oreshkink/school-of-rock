@@ -11,7 +11,7 @@ let md = new MarkdownIt();
 
 module.exports = {
     index: function *(router) {
-        // Список преподавателей
+        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         let teachers = yield Teacher.model.aggregate([
             {
                 $lookup: {
@@ -20,12 +20,15 @@ module.exports = {
                     foreignField: 'teacherSlug',
                     as: 'teacherInstruments'
                 }
+            },
+            {
+                $sort : { sort : 1 }
             }
         ]).exec();
 
         let instrumentsSlugs = [];
 
-        // Получаем список всех инструментов для одного запроса
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         teachers.forEach(teacher => {
             instrumentsSlugs = instrumentsSlugs.concat(
                 teacher.teacherInstruments.map(
@@ -36,14 +39,14 @@ module.exports = {
             );
         });
 
-        // Запрос на получение описания инструментов
+        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         const instruments = yield Instrument.model.find(
             {
                 slug: { $in: instrumentsSlugs }
             }
         ).exec();
 
-        // Добавляем инструменты к каждому преподавателю
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         teachers.forEach((teacher, i) => {
             let instrumentsSlugs = teacher.teacherInstruments.map(
                 teacherInstrument => {
@@ -68,7 +71,7 @@ module.exports = {
     },
 
     show: function *(router) {
-        // Учитель
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         const teachers = yield Teacher.model.aggregate(
             [
                 {
@@ -94,7 +97,7 @@ module.exports = {
 
         teacher.description = md.render(teacher.description);
 
-        // Преподаваемые инструменты
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (teacher.teacherInstruments) {
             instrumentsSlugs = teacher.teacherInstruments.map(
                 teacherInstrument => {

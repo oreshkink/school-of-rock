@@ -82,14 +82,14 @@
 	__webpack_require__(31);
 
 	// Статьи
-	__webpack_require__(41);
-	__webpack_require__(39);
-
 	__webpack_require__(33);
 	__webpack_require__(35);
 
-	__webpack_require__(36);
-	__webpack_require__(38);
+	__webpack_require__(37);
+	__webpack_require__(39);
+
+	__webpack_require__(40);
+	__webpack_require__(42);
 
 	$(function () {
 	    var $teachersList = $('.teachers-list');
@@ -99,10 +99,10 @@
 	    var $backCallWindow = $('.back-call-window');
 	    var $backCallForm = $backCallWindow.find('form');
 
-	    $teachersList.owlCarousel({
-	        items: 6,
-	        margin: 10
-	    });
+	    // $teachersList.owlCarousel({
+	    //     items: 6,
+	    //     margin: 10
+	    // });
 
 	    $backCallForm.submit(function (e) {
 	        e.preventDefault();
@@ -830,7 +830,7 @@
 
 
 	// module
-	exports.push([module.id, ".instruments-list-page {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.instruments-list-page a {\n  color: #fff;\n}\n.instruments-list-page .title {\n  font-family: 'LatoWebBlack';\n  font-size: 60px;\n}\n.instruments-list-page .instruments-list {\n  margin-top: 45px;\n  font-family: 'LatoWebThin';\n}\n.instruments-list-page .instruments-list .instrument {\n  display: flex;\n  padding: 40px;\n  background-color: rgba(16,70,93,0.4);\n}\n.instruments-list-page .instruments-list .instrument .instrument-description {\n  flex: 0 0 610px;\n}\n.instruments-list-page .instruments-list .instrument .instrument-description .instrument-name {\n  font-size: 40px;\n  margin-bottom: 15px;\n}\n.instruments-list-page .instruments-list .instrument .instrument-description .instrument-specification {\n  font-size: 20px;\n  line-height: 25px;\n}\n.instruments-list-page .instruments-list .instrument .teacher {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  margin-left: 50px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo {\n  flex: 0 0 150px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo img {\n  width: 100%;\n  height: 100%;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo img.colored {\n  display: block;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name {\n  margin-left: 20px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name .teacher-title {\n  font-family: 'LatoWeb';\n  font-size: 16px;\n  text-transform: uppercase;\n  margin-bottom: 10px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name .teacher-fullname {\n  font-size: 22px;\n}\n.instruments-list-page .instruments-list .instrument:nth-child(2n) {\n  background: none;\n}\n.instruments-list-page .instruments-list .instrument:hover .teacher .teacher-photo img.colored {\n  display: block;\n}\n", ""]);
+	exports.push([module.id, ".instruments-list-page {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.instruments-list-page a {\n  color: #fff;\n}\n.instruments-list-page .title {\n  font-family: 'LatoWebBlack';\n  font-size: 60px;\n}\n.instruments-list-page .instruments-list {\n  margin-top: 45px;\n  font-family: 'LatoWebThin';\n}\n.instruments-list-page .instruments-list .instrument {\n  display: flex;\n  padding: 40px;\n  background-color: rgba(16,70,93,0.4);\n}\n.instruments-list-page .instruments-list .instrument .instrument-description {\n  flex: 0 0 610px;\n}\n.instruments-list-page .instruments-list .instrument .instrument-description .instrument-name {\n  font-size: 40px;\n  margin-bottom: 15px;\n}\n.instruments-list-page .instruments-list .instrument .instrument-description .instrument-specification {\n  font-size: 20px;\n  line-height: 25px;\n}\n.instruments-list-page .instruments-list .instrument .teacher {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  margin-left: 50px;\n  justify-content: space-between;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-info {\n  flex: 0 0 150px;\n  width: 150px;\n  height: 150px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo {\n  margin-bottom: 20px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo img {\n  margin-bottom: 10px;\n  max-width: 100%;\n  max-height: 100%;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-photo img.colored {\n  display: block;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name {\n  text-align: center;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name .teacher-title {\n  font-family: 'LatoWeb';\n  font-size: 16px;\n  text-transform: uppercase;\n  margin-bottom: 10px;\n}\n.instruments-list-page .instruments-list .instrument .teacher .teacher-name .teacher-fullname {\n  font-size: 22px;\n}\n.instruments-list-page .instruments-list .instrument:nth-child(2n) {\n  background: none;\n}\n.instruments-list-page .instruments-list .instrument:hover .teacher .teacher-photo img.colored {\n  display: block;\n}\n", ""]);
 
 	// exports
 
@@ -870,7 +870,7 @@
 
 
 	// module
-	exports.push([module.id, ".instrument-detail-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n  display: flex;\n  justify-content: space-between;\n}\n.instrument-detail-page .main {\n  flex: 0 0 640px;\n}\n.instrument-detail-page .main .title {\n  font-family: 'LatoWebBlack';\n  font-size: 80px;\n}\n.instrument-detail-page .main .teachers {\n  margin: 15px 0;\n  font-size: 40px;\n  font-family: 'LatoWebThin';\n}\n.instrument-detail-page .additional {\n  flex: 0 0 380px;\n}\n.instrument-detail-page .additional .instruments {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .instruments li {\n  margin: 8px 0;\n}\n.instrument-detail-page .additional .try-it {\n  margin-top: 30px;\n}\n.instrument-detail-page .additional .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.instrument-detail-page .additional .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n.instrument-detail-page .additional .reviews {\n  margin-top: 30px;\n  margin-bottom: 10px;\n}\n.instrument-detail-page .additional .reviews .reviews-title {\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n", ""]);
+	exports.push([module.id, ".instrument-detail-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n  display: flex;\n  justify-content: space-between;\n}\n.instrument-detail-page .main {\n  flex: 0 0 640px;\n}\n.instrument-detail-page .main .title {\n  font-family: 'LatoWebBlack';\n  font-size: 80px;\n}\n.instrument-detail-page .main .teachers {\n  margin: 15px 0;\n  font-size: 40px;\n  font-family: 'LatoWebThin';\n}\n.instrument-detail-page .main .teachers li {\n  margin-bottom: 10px;\n}\n.instrument-detail-page .additional {\n  flex: 0 0 380px;\n}\n.instrument-detail-page .additional .instruments {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .instruments li {\n  margin: 8px 0;\n}\n.instrument-detail-page .additional .try-it {\n  margin-top: 30px;\n}\n.instrument-detail-page .additional .try-it .try-it-title {\n  display: flex;\n  align-items: center;\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n.instrument-detail-page .additional .try-it .try-it-title .try-it-icon {\n  background: url(\"/try-it.png\") no-repeat center center;\n  width: 31px;\n  height: 31px;\n  margin-right: 10px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons {\n  margin-top: 20px;\n}\n.instrument-detail-page .additional .try-it .try-it-buttons .btn {\n  margin-bottom: 15px;\n}\n.instrument-detail-page .additional .reviews {\n  margin-top: 30px;\n  margin-bottom: 10px;\n}\n.instrument-detail-page .additional .reviews .reviews-title {\n  font-size: 26px;\n  font-family: 'LatoWebBlack';\n}\n", ""]);
 
 	// exports
 
@@ -910,7 +910,7 @@
 
 
 	// module
-	exports.push([module.id, ".teachers-list-page {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.teachers-list-page .teachers-list {\n  margin: 50px 0;\n}\n.teachers-list-page .teachers-list .teacher {\n  display: flex;\n  width: 150px;\n  height: 450px;\n}\n.teachers-list-page .teachers-list .teacher .description {\n  flex: 0 0 30px;\n  height: 100%;\n  position: relative;\n}\n.teachers-list-page .teachers-list .teacher .description .name {\n  transform: rotate(90deg);\n  transform-origin: left top 0;\n  width: 400px;\n  position: absolute;\n  left: 23px;\n}\n.teachers-list-page .teachers-list .teacher .description .name .instrument:before {\n  margin: 0 10px;\n  content: '|';\n}\n.teachers-list-page .teachers-list .teacher .photo .bw {\n  display: block;\n}\n.teachers-list-page .teachers-list .teacher .photo .colored {\n  display: none;\n}\n.teachers-list-page .teachers-list .teacher:hover .description {\n  color: #f26a0f;\n  font-weight: bold;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .bw {\n  display: none;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .colored {\n  display: block;\n}\n", ""]);
+	exports.push([module.id, ".teachers-list-page {\n  width: 1110px;\n  margin: auto;\n  color: #eee;\n  margin-top: 80px;\n  margin-bottom: 80px;\n}\n.teachers-list-page .teachers-list {\n  margin: 50px 0;\n}\n.teachers-list-page .teachers-list .teacher-link {\n  display: inline-block;\n  margin-right: 90px;\n  margin-bottom: 30px;\n}\n.teachers-list-page .teachers-list .teacher-link:nth-child(5n) {\n  margin-right: 0;\n}\n.teachers-list-page .teachers-list .teacher {\n  display: flex;\n  width: 150px;\n  height: 450px;\n}\n.teachers-list-page .teachers-list .teacher .description {\n  flex: 0 0 30px;\n  height: 100%;\n  position: relative;\n}\n.teachers-list-page .teachers-list .teacher .description .name {\n  transform: rotate(90deg);\n  transform-origin: left top 0;\n  width: 400px;\n  position: absolute;\n  left: 23px;\n}\n.teachers-list-page .teachers-list .teacher .description .name .instrument:before {\n  margin: 0 10px;\n  content: '|';\n}\n.teachers-list-page .teachers-list .teacher .photo {\n  width: 120px;\n  height: 450px;\n}\n.teachers-list-page .teachers-list .teacher .photo img {\n  max-width: 100%;\n  max-height: 100%;\n}\n.teachers-list-page .teachers-list .teacher .photo .bw {\n  display: none;\n}\n.teachers-list-page .teachers-list .teacher .photo .colored {\n  display: block;\n}\n.teachers-list-page .teachers-list .teacher:hover .description {\n  color: #f26a0f;\n  font-weight: bold;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .bw {\n  display: block;\n}\n.teachers-list-page .teachers-list .teacher:hover .photo .colored {\n  display: none;\n}\n", ""]);
 
 	// exports
 
@@ -1051,8 +1051,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!./alert.css", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!./alert.css");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./article.styl", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./article.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -1070,13 +1070,93 @@
 
 
 	// module
-	exports.push([module.id, ".alert {\r\n  position: absolute;\r\n  top: 15px;\r\n  right: 15px;\r\n  width: 250px;\r\n  padding: 15px;\r\n  border: 1px solid transparent;\r\n  border-radius: 4px;\r\n}\r\n\r\n.alert.hide {\r\n  display: none;\r\n}\r\n\r\n.alert h4 {\r\n  margin: 10px 0;\r\n  color: inherit;\r\n}\r\n\r\n.alert .alert-link {\r\n  font-weight: bold;\r\n}\r\n\r\n.alert > p, .alert > ul {\r\n  margin-bottom: 0;\r\n}\r\n\r\n.alert > p + p {\r\n  margin-top: 5px;\r\n}\r\n\r\n.alert-dismissable,\r\n.alert-dismissible {\r\n  padding-right: 35px;\r\n}\r\n\r\n.alert-dismissable .close,\r\n.alert-dismissible .close {\r\n  position: relative;\r\n  top: -2px;\r\n  right: -21px;\r\n  color: inherit;\r\n}\r\n\r\n.alert-success {\r\n  background-color: #dff0d8;\r\n  border-color: #DFF0D8;\r\n  color: #3c763d;\r\n}\r\n\r\n.alert-success hr {\r\n  border-top-color: #DFF0D8;\r\n}\r\n\r\n.alert-success .alert-link {\r\n  color: #3c763d;\r\n}\r\n\r\n.alert-danger {\r\n  background-color: #f2dede;\r\n  border-color: #E0CCCC;\r\n  color: #a94442;\r\n}\r\n\r\n.alert-danger hr {\r\n  border-top-color: #E0CCCC;\r\n}\r\n\r\n.alert-danger .alert-link {\r\n  color: #a94442;\r\n}\r\n\r\n", ""]);
+	exports.push([module.id, ".article-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.article-page .ap--title {\n  margin-bottom: 40px;\n}\n.article-page .ap--description {\n  font-size: 18px;\n  line-height: 1.5em;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(36);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./articles.styl", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./articles.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".articles-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.articles-page .ap--title {\n  margin-bottom: 50px;\n}\n.articles-page .ap--list .article {\n  margin-bottom: 30px;\n}\n.articles-page .ap--list .article .article--title {\n  font-size: 26px;\n  margin-bottom: 20px;\n}\n.articles-page .ap--list .article .article--description {\n  font-size: 18px;\n  line-height: 1.5em;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(38);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./alert.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./alert.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".alert {\r\n  position: absolute;\r\n  top: 15px;\r\n  right: 15px;\r\n  width: 250px;\r\n  padding: 15px;\r\n  border: 1px solid transparent;\r\n  border-radius: 4px;\r\n}\r\n\r\n.alert.hide {\r\n  display: none;\r\n}\r\n\r\n.alert h4 {\r\n  margin: 10px 0;\r\n  color: inherit;\r\n}\r\n\r\n.alert .alert-link {\r\n  font-weight: bold;\r\n}\r\n\r\n.alert > p, .alert > ul {\r\n  margin-bottom: 0;\r\n}\r\n\r\n.alert > p + p {\r\n  margin-top: 5px;\r\n}\r\n\r\n.alert-dismissable,\r\n.alert-dismissible {\r\n  padding-right: 35px;\r\n}\r\n\r\n.alert-dismissable .close,\r\n.alert-dismissible .close {\r\n  position: relative;\r\n  top: -2px;\r\n  right: -21px;\r\n  color: inherit;\r\n}\r\n\r\n.alert-success {\r\n  background-color: #dff0d8;\r\n  border-color: #DFF0D8;\r\n  color: #3c763d;\r\n}\r\n\r\n.alert-success hr {\r\n  border-top-color: #DFF0D8;\r\n}\r\n\r\n.alert-success .alert-link {\r\n  color: #3c763d;\r\n}\r\n\r\n.alert-danger {\r\n  background-color: #f2dede;\r\n  border-color: #E0CCCC;\r\n  color: #a94442;\r\n}\r\n\r\n.alert-danger hr {\r\n  border-top-color: #E0CCCC;\r\n}\r\n\r\n.alert-danger .alert-link {\r\n  color: #a94442;\r\n}\r\n\r\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 39 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1168,13 +1248,13 @@
 	}(jQuery);
 
 /***/ },
-/* 36 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(37);
+	var content = __webpack_require__(41);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -1194,7 +1274,7 @@
 	}
 
 /***/ },
-/* 37 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -1208,7 +1288,7 @@
 
 
 /***/ },
-/* 38 */
+/* 42 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1519,86 +1599,6 @@
 	    Plugin.call($target, option, this);
 	  });
 	}(jQuery);
-
-/***/ },
-/* 39 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(40);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./articles.styl", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./articles.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".articles-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.articles-page .ap--title {\n  margin-bottom: 50px;\n}\n.articles-page .ap--list .article {\n  margin-bottom: 30px;\n}\n.articles-page .ap--list .article .article--title {\n  font-size: 26px;\n  margin-bottom: 20px;\n}\n.articles-page .ap--list .article .article--description {\n  font-size: 18px;\n  line-height: 1.5em;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 41 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(42);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./article.styl", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/stylus-loader/index.js!./article.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".article-page {\n  color: #fff;\n  margin: 80px auto;\n  width: 1110px;\n}\n.article-page .ap--title {\n  margin-bottom: 40px;\n}\n.article-page .ap--description {\n  font-size: 18px;\n  line-height: 1.5em;\n}\n", ""]);
-
-	// exports
-
 
 /***/ }
 /******/ ]);

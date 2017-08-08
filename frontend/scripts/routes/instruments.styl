@@ -36,20 +36,27 @@
         width 100%
         display flex
         align-items center
-        margin-left: 50px;
+        margin-left 50px
+        justify-content space-between
+
+        .teacher-info
+          flex 0 0 150px
+          width 150px
+          height 150px
 
         .teacher-photo
-          flex 0 0 150px
+          margin-bottom 20px
 
           img
-            width 100%
-            height 100%
+            margin-bottom 10px
+            max-width 100%
+            max-height 100%
 
             &.colored
               display block
 
         .teacher-name
-          margin-left 20px
+          text-align center
 
           .teacher-title
             font-family 'LatoWeb'
